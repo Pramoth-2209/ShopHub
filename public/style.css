@@ -1,0 +1,55 @@
+/*<div>
+        <%- include('partials/navbar')%>
+    </div>*/
+
+body{
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.lbody{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loginbox{
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.27);
+    transition: 0.3s ease-in-out;
+}
+.loginbox:hover{
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.27);
+}
+.loginbox input{
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid gray;
+
+}
+.loginbox .inps{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+   
+}
+.loginbox button{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.323);
+    border: none;
+    transition: 0.2s ease-in-out;
+}
+.loginbox button:hover{
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.27);
+}
