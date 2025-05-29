@@ -24,6 +24,7 @@ body{
 }
 .loginbox:hover{
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.27);
+  
 }
 .loginbox input{
     padding: 10px;
@@ -31,7 +32,11 @@ body{
     margin-bottom: 15px;
     border-radius: 5px;
     border: 1px solid gray;
+    transition: 0.2s ease-in-out;
 
+}
+.loginbox input:hover{
+    transform: scale(1.05);
 }
 .loginbox .inps{
     display: flex;
@@ -51,5 +56,159 @@ body{
     transition: 0.2s ease-in-out;
 }
 .loginbox button:hover{
-      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.27);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.27);
+    transform: scale(1.05);
+}
+
+/*dashboard*/
+
+.dashheads{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px auto;
+    width: 95%;
+    gap: 50px;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    border-radius: 10px;
+    height: 50px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.323);
+}
+.dashheads .date{
+    width: 50%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    margin-left: 30px;
+   
+}
+.dashheads .username{
+    width: 50%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    margin-right: 30px;
+}
+.headings{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.username label{
+    padding: 10px;
+    border-radius: 10px;
+}
+button{
+    background-color: rgb(59, 59, 59);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.323);
+    border: none;
+    transition: 0.2s ease-in-out;
+    padding: 10px;
+    font-size: larger;
+    font-weight: bolder;
+}
+button:hover{
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.27);
+    transform: scale(1.02);
+}
+.searchbar input:hover{
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.27);
+    transform: scale(1.0);
+
+}
+.searchbar input{
+    width: 300px;
+    padding: 10px;
+    font-size: larger;
+    font-weight: bolder;
+    border-radius: 10px;
+    border: 1px solid gray;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.323);
+    transition: 0.2s ease-in-out;
+}
+.searchbar form{
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.dashcards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,2fr));
+    gap: 30px;
+    margin: 15px;
+    margin-top: 80px;
+    background-color:rgba(59, 59, 59, 0.178);
+    padding: 20px;
+    border-radius: 10px;
+}
+#cards{
+    height: 170px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.323);
+    transition: 0.2s ease-in-out;
+    padding: 20px;
+    
+
+}
+#counttp{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    text-align: end;
+   
+   
+}
+#counttp h1{
+    font-size: 50px;
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+.svg{
+    height: 100%;
+    width: 50%;
+    align-items: start;
+    justify-content: start;
+    display: flex;
+
+}
+#value{
+    width: 50%;
+}
+#titledb{
+    align-items: end;
+    justify-content: end;
+    display: flex;
+    text-align: end;
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+#title h3{
+   font-size: 20px;
+   font-weight: bolder;
+}
+#cards:hover{
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.27);
+    transform: scale(1.02);
+    background-color: rgb(59, 59, 59);
+    color: white;
+
+}
+.dashcards a{
+    text-decoration: none;
+    color: rgb(59, 59, 59);
+
 }

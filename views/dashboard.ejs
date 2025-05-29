@@ -8,12 +8,94 @@
 </head>
 <body>
     <div>
-        <div>
-            <input type="search">
+       <div class="dashheads">
+            <div class="date">
+                <h4 id="datetime"> </h4>
+            </div>
+            <div class="headings">
+                <h2>Sri Sivasakthi Gold Bankers</h2>
+            </div>
+            <div class="username">
+                <h4><label for="user">saravanan</label></h4>
+            </div>   
         </div>
-        <div>
-            
+        <div class="searchbar">
+            <form action="" method="post">
+                <input type="search" id="search">
+                <button>search</button>
+            </form>
+        </div>
+        <div class="dashcards">
+            <a href="addcustomer.ejs">
+                <div class="addcustomer" id="cards">
+                    <div id="counttp">
+                        <div class="svg">
+                        <h3>lskdjfl</h3>
+                    </div>
+                    <div id="value">
+
+                    </div>
+                    </div>
+                    <div id="titledb">
+                        <h3>Add customer</h3>
+                    </div>
+                </div>
+            </a>
+            <div class="totalpawn" id="cards">
+                <div id="counttp">
+                    <div class="svg">
+                        <h3>lskdjfl</h3>
+                    </div>
+                    <div id="value">
+                    <h1><%=formatd(11000)%></h1>
+                    </div>
+                </div>
+                <div id="titledb">                
+                    <h3>Total pawn</h3>
+                </div>
+            </div>
+            <div class="totalcustomer" id="cards">
+                <div id="counttp">
+                    <div class="svg">
+                        <h3>lskdjfl</h3>
+                    </div>
+                    <div id="value">
+                        <h1><%=formatd(33000)%></h1>
+                    </div>
+                </div>
+                <div id="titledb">
+                    <h3>Total customer</h3>
+                </div>
+            </div>
+            <div class="amountlent" id="cards">
+                <div id="counttp">
+                    <div class="svg">
+                        <h3>lskdjfl</h3>
+                    </div>
+                    <div id="value">
+                        <h1><%=formatNumber(2500)%></h1>
+                    </div>
+                </div>
+                <div id="titledb">
+                    <h3>Amount lent</h3>
+                </div>
+            </div>
+            <div class="history" id="cards">
+                <div id="counttp">
+                    <div class="svg">
+                        <h3>lskdjfl</h3>
+                    </div>
+                    <div id="value">
+
+                    </div>
+
+                </div>
+                <div id="titledb">
+                    <h3>History</h3>
+                </div>
+            </div>
         </div>
     </div>
 </body>
+<script src="script.js"></script>
 </html>
