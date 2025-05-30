@@ -15,19 +15,24 @@ app.get("/dashboard",(req,res)=>{
     res.render("dashboard")
 })
 
+app.get("/addcustomer",(req,res)=>{
+    res.render('addcustomer')
+})
+
 function formatNumber(num){
     if(num>=10000000){
-        return"₹"+(num/10000000).toFixed(2).replace(/\.00$/, '')+'cr';
+        return"₹."+(num/10000000).toFixed(2).replace(/\.00$/, '')+'cr';
     }else if(num>=100000){
-        return"₹" +(num/100000).toFixed(2).replace(/\.00$/,'')+'L';
+        return"₹." +(num/100000).toFixed(2).replace(/\.00$/,'')+'L';
     }else if(num>=1000){
-        return"₹" +(num/1000).toFixed(2).replace(/\.00$/,'')+'k';
+        return"₹." +(num/1000).toFixed(2).replace(/\.00$/,'')+'k';
     }else{
-        return"₹"+num.tostring();
+        return"₹."+num.toString();
     }
 }
 
 function formatd(num){
+    num=Number(num)
     if(num>=10000000){
         return(num/10000000).toFixed(2).replace(/\.00$/, '')+'cr';
     }else if(num>=100000){
@@ -35,7 +40,7 @@ function formatd(num){
     }else if(num>=1000){
         return(num/1000).toFixed(2).replace(/\.00$/,'')+'k';
     }else{
-        returnnum.tostring();
+        return num.toString();
     }
 }
 app.locals.formatd=formatd;
