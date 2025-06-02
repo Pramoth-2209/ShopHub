@@ -16,6 +16,7 @@ app.get("/dashboard",(req,res)=>{
 })
 
 app.get("/addcustomer",(req,res)=>{
+    const detail=
     res.render('addcustomer')
 })
 

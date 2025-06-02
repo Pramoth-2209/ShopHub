@@ -5,4 +5,7 @@ function updatedatetime(){
 setInterval(updatedatetime,1000);
 updatedatetime();
 
-
+function togglemenu(){
+    const menus=document.getElementById("menus");
+    menus.classList.toggle('active')
+}

@@ -80,32 +80,75 @@ body{
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.323);
 }
 .dashheads .date{
-    width: 50%;
+    width:50%;
     display: flex;
     align-items: start;
     justify-content: start;
     margin-left: 30px;
    
 }
-.dashheads .username{
-    width: 50%;
-    display: flex;
-    align-items: end;
-    justify-content: end;
-    margin-right: 30px;
-}
 .headings{
-    width: 100%;
+    width:50%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     text-transform: capitalize;
 }
-
-.username label{
-    padding: 10px;
+.username{
+    display: flex;
+    width: 50%;
+    align-items:end;
+    justify-content: end;
+    margin-right: 30px;
+}
+.prof{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 10px;
+    width: 100%;
+    margin: 0px;
+    height:50px;
+    margin: 0px 10px 0px 0px;
+}
+.prof svg{
+    height: 30px;
+    width: 30px;
+    margin: 0px 0px 0px 10px;
+}
+#logout:hover{
+    background-color:rgb(59, 59, 59);
     border-radius: 10px;
+}
+
+@media (min-width:20px){
+    .menus{
+        flex-direction: column;
+        width:fit-content;
+        display: none;
+        align-items:start;
+        position: absolute;
+        top: 60px;
+        padding: 20px;
+        right: 0;
+        background-color:rgba(59, 59, 59, 0.433);
+        backdrop-filter: blur(20px);
+        margin: 10px 40px 0px 10px;
+        border-radius: 10px;
+      
+    }
+   .menus.active{
+    display: flex;
+    
+   }
+   .menus .cont{
+    display: flex;
+   }
+   .menus a{
+    color: white;
+    text-decoration: none;
+   }
 }
 
 .searchbar svg{
@@ -275,4 +318,21 @@ button svg:hover{
     height: 100%;
     width: 100%;
     /*background-color: yellow;*/
+}
+
+
+/*add customer*/
+
+.abody{
+    background-color: pink;
+    display: flex;
+    width: 100%;
+}
+.aleft{
+    background-color: aqua;
+    width: 100%;
+}
+.aright{
+    background-color: violet;
+    width: 100%;
 }
