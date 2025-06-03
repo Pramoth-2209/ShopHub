@@ -11,9 +11,9 @@
        <%-include('partials/navbar')%>
         </div>
         <div class="searchbar">
-            <form action="" method="post">
-                <input type="search" id="search" placeholder="Search...">
-                <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg></button>
+            <form action="/search" method="post">
+                <input type="search" id="search" placeholder="Search..." name="q">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
             </form>
         </div>
         <div class="dashcards">
@@ -35,20 +35,22 @@
                     
                 </div>
             </a>
-            <div class="totalpawn" id="cards">
-                <div id="counttp">
-                    <div class="svg">
-                        <h3><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="70%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gem-icon lucide-gem"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg></h3>
+            <a href="totalpawn">
+                <div class="totalpawn" id="cards">
+                    <div id="counttp">
+                        <div class="svg">
+                            <h3><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="70%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gem-icon lucide-gem"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg></h3>
+                        </div>
+                        <div id="value">
+                        <h1><%=formatd(110)%></h1>
+                        <div id="titledb">                
+                            <h3>Total Pawn</h3>
+                        </div>
+                        </div>
                     </div>
-                    <div id="value">
-                    <h1><%=formatd(110)%></h1>
-                    <div id="titledb">                
-                        <h3>Total Pawn</h3>
-                    </div>
-                    </div>
+                    
                 </div>
-                
-            </div>
+            </a>
             <div class="totalcustomer" id="cards">
                 <div id="counttp">
                     <div class="svg">

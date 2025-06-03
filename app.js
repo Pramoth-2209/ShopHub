@@ -20,6 +20,15 @@ app.get("/addcustomer",(req,res)=>{
     res.render('addcustomer')
 })
 
+app.get("/totalpawn",(req,res)=>{
+    res.render('totalpawn')
+})
+
+app.post('/search',(req,res)=>{
+    const q=req.body;
+    console.log(q)
+    res.render('search')
+})
 app.post('/addnew',(req,res)=>{
     const names=req.body;
     console.log(names);
