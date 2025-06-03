@@ -5,6 +5,7 @@ const app=express();
 
 app.use(bodyparser.urlencoded({extended:false}))
 app.set("view engine","ejs")
+app.use(express.json())
 app.use(express.static('public'))
 
 app.get("/",(req,res)=>{
@@ -16,8 +17,21 @@ app.get("/dashboard",(req,res)=>{
 })
 
 app.get("/addcustomer",(req,res)=>{
-    const detail=
     res.render('addcustomer')
+})
+
+app.post('/addnew',(req,res)=>{
+    const names=req.body;
+    console.log(names);
+    res.send('added successfully')
+})
+
+app.post('/addcustomer',(req,res)=>{
+    const {name,fathername,dob,phonenumber,occupation,address}=req.body;
+    if(!name||!fathername||!dob||!phonenumber||!occupation||!address){
+        return res.status(500);
+    }
+    res.json({message:'user register succsfully'})
 })
 
 function formatNumber(num){

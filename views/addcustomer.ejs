@@ -10,16 +10,47 @@
     <div>
         <%-include('partials/navbar')%>
     </div>
+    
+    <div class="aabody">
+        <div class="achead">
+            <H1>Add Customer</H1>
+        </div>
     <div class="abody">
-        <form action="/addcustomer" method="post"></form>
             <div class="aleft">
-                <input type="text">
+                <div class="fields">
+                    <label for="name">Name:</label>
+                    <input type="text" name="names" id="name" required>
+                </div>
+                <div class="fields">
+                    <label for="fathername">Father name:</label>
+                    <input type="text" name="father name" id="fathername" required >
+                </div>
+                <div class="fields">
+                    <label for="dob">Date Of Birth:</label>
+                    <input type="date" name="dob" id="dob" required>
+                </div>
+                <div class="fields">
+                    <label for="phonenumber">Phone No:</label>
+                    <input type="tel" name="phone number" id="phonenumber" required>
+                </div>
+                <div class="fields">
+                    <label for="occupation">Occupataion:</label>
+                    <input type="text" name="occupation" id="occupation" required>
+                </div>
             </div>
             <div class="aright">
-                <input type="text">
+                <div class="fields">
+                    <label for="address">Address:</label>
+                    <textarea name="address" id="address" required></textarea>
+                </div>
+                <div class="regibtn">
+                    <button onclick="register()" id="regibtn">register</button>
+                 </div> 
             </div>
-        </form>
     </div>
+    </div>
+    
+            
 </body>
 <script src="script.js"></script>
 </html>
