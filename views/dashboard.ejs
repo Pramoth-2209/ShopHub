@@ -9,10 +9,11 @@
 <body>
     <div>
        <%-include('partials/navbar')%>
-        </div>
+    </div>
         <div class="searchbar">
             <form action="/search" method="post">
                 <input type="search" id="search" placeholder="Search..." name="q">
+                <!--<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-search-icon lucide-user-search"><circle cx="10" cy="7" r="4"/><path d="M10.3 15H7a4 4 0 0 0-4 4v2"/><circle cx="17" cy="17" r="3"/><path d="m21 21-1.9-1.9"/></svg>-->
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
             </form>
         </div>
@@ -51,20 +52,22 @@
                     
                 </div>
             </a>
-            <div class="totalcustomer" id="cards">
-                <div id="counttp">
-                    <div class="svg">
-                        <h3><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="70%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg></h3>
+            <a href="totalcustomer">
+                <div class="totalcustomer" id="cards">
+                    <div id="counttp">
+                        <div class="svg">
+                            <h3><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="70%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg></h3>
+                        </div>
+                        <div id="value">
+                            <h1><%=formatd(33000)%></h1>
+                                <div id="titledb">
+                            <h3>Total Customer</h3>
                     </div>
-                    <div id="value">
-                        <h1><%=formatd(33000)%></h1>
-                            <div id="titledb">
-                        <h3>Total Customer</h3>
-                </div>
+                        </div>
                     </div>
+                    
                 </div>
-                
-            </div>
+            </a>
             <div class="amountlent" id="cards">
                 <div id="counttp">
                     <div class="svg">

@@ -24,6 +24,10 @@ app.get("/totalpawn",(req,res)=>{
     res.render('totalpawn')
 })
 
+app.get("/totalcustomer",(req,res)=>{
+    res.render("totalcustomer")
+})
+
 app.post('/search',(req,res)=>{
     const q=req.body;
     console.log(q)
