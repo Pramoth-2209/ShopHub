@@ -456,12 +456,10 @@ button svg:hover{
 .tpdisplay table{
     background-color: white;
     width: 90%;
-    border: 2px solid;
     align-items: center;
     border-collapse: collapse;
     justify-content: center;
     margin:10px auto;
-    border:1px gray;
     border-radius: 10px;
      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.27);
 }
@@ -474,7 +472,6 @@ th,td{
     padding:12px 15px;
     border: none;
     text-align: left;
-    border: 2px solid rgb(59, 59, 59);
 }
 .tpdisplay tbody tr:nth-child(even){
     background-color: #f5f5f5;
@@ -499,16 +496,16 @@ th,td{
     align-items: flex-start;
     gap: 10px;
     width: 100%;
-    height: 100%;
+    height: fit-content;
 }
 .ccards svg{
     height:70px;
-    margin: 10px 0px 5px 10px;
     width: 70px;
     background-color: rgb(59, 59, 59);
     color: white;
     border: 1px solid white;
-    border-radius: 100%;   
+    border-radius: 100%;  
+     
 }
 .ccards img{
     height:70px;
@@ -525,14 +522,16 @@ th,td{
     word-wrap: break-word;
     white-space: normal;
     margin: 3px;
-    width: 100%;
+    width: 70%;
     display: flex;
     align-items: center;
+    color: rgb(128, 128, 128);
 
 }
 .ccbody label{
-    width: 50%;
+    width: 30%;
     padding-left: 10px;
+    color: rgb(91, 91, 91);
 }
 .cctail p{
     margin:0px 5px 10px 5px;
@@ -549,7 +548,7 @@ a{
     padding: 10px;
     background-color:white;
     color: black;
-    height: 300px;
+    height: fit-content;
     width: fit-content;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
@@ -567,14 +566,11 @@ a{
    
 .ccbody{
     padding: 0px 10px 0px 10px;
-    height: 100%;
+    height: 200px;
     border-radius: 10px;
     
 }
-#details{
-    display: flex;
-    align-items: center;
-}
+
 .cctail{
     height: 100px;
     overflow: hidden;
@@ -591,7 +587,8 @@ a{
     height: fit-content;
     border-radius: 10px;
     display: flex;
-    gap: 20px;
+    width: 100%;
+
 }
 .ccbody{
     line-height: 25px;
@@ -605,7 +602,26 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 10px;
 }
+#detailss{
+    width: 70%;
+    height: 80px;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    display: grid;
+    align-items: center;
+}
+
+#detailsvg{
+width: 30%;
+height:80px;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 10px 0px 10px 0px;
+}
+
 /*customerdetails*/
 .cdhead{
     background-color: white;
