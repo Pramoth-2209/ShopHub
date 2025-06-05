@@ -28,6 +28,9 @@ app.get("/totalcustomer",(req,res)=>{
     res.render("totalcustomer")
 })
 
+app.get("/customerdetails",(req,res)=>{
+    res.render("customerdetails")
+})
 app.post('/search',(req,res)=>{
     const q=req.body;
     console.log(q)

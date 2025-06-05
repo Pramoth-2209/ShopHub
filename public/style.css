@@ -238,13 +238,13 @@ button svg:hover{
     height: 150px;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.323);
     transition: 0.2s ease-in-out;
     padding: 10px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.27) ;  
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.27) ; 
+    transition: 0.3s ease-in-out; 
 }
 #cards:hover{
-    box-shadow: 0px 10px 200px rgba(0, 0, 0, 0.27);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.27);
 }
 #counttp{
     height: 100%;
@@ -300,10 +300,10 @@ button svg:hover{
    font-weight: bolder;
 }
 #cards:hover{
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.27);
-    transform: scale(1.02);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.27);
     background-color: rgb(59, 59, 59);
     color: white;
+    transform: scale(1.05);
 
 }
 .dashcards a{
@@ -491,7 +491,7 @@ th,td{
     margin:3% auto;
     width: 90%;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
     gap: 30px;
 }
 .ccards{
@@ -503,13 +503,12 @@ th,td{
 }
 .ccards svg{
     height:70px;
-    margin: 0px 0px 5px 0px;
+    margin: 10px 0px 5px 10px;
     width: 70px;
     background-color: rgb(59, 59, 59);
     color: white;
     border: 1px solid white;
-    border-radius: 10px;
-    
+    border-radius: 100%;   
 }
 .ccards img{
     height:70px;
@@ -518,7 +517,7 @@ th,td{
     background-color: rgb(59, 59, 59);
     color: white;
     border: 1px solid white;
-    border-radius: 10px;
+    border-radius:100%;
     
 }
 
@@ -533,6 +532,7 @@ th,td{
 }
 .ccbody label{
     width: 50%;
+    padding-left: 10px;
 }
 .cctail p{
     margin:0px 5px 10px 5px;
@@ -542,18 +542,29 @@ th,td{
     overflow: hidden;
     text-overflow: ellipsis;
 }
+a{
+    text-decoration: none;
+}
 .mcard{
-     padding: 10px;
-     border: 2px solid rgb(59, 59, 59);
-     background-color:white;
-     height: 300px;
-     border-radius: 10px;
-     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 10px;
+    background-color:white;
+    color: black;
+    height: 300px;
+    width: fit-content;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    transition: 0.2s ease-in-out;
+
 }
+/*.mcard:hover{
+    background-color: rgb(59, 59, 59);
+    color: white;
+}*/
 .mcard:hover{
+    box-shadow: 24px 24px 20px rgba(0, 0, 0, 0.1);
     transform: scale(1.02);
-    transition: 0.3s ease-in-out;
-}
+    }
+   
 .ccbody{
     padding: 0px 10px 0px 10px;
     height: 100%;
@@ -581,10 +592,80 @@ th,td{
     border-radius: 10px;
     display: flex;
     gap: 20px;
-
 }
 .ccbody{
     line-height: 25px;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+h2{
+    text-transform: capitalize;
+}
+#details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*customerdetails*/
+.cdhead{
+    background-color: white;
+    width: 90%;
+    margin: 30px auto;
+    padding: 15px;
+    display: flex;
+    border-radius: 10px;
+   }
+.cphoto{
+    width: 20%;
+}
+.cphoto img{
+    height: 140px;
+    width: 140px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px auto;
+   
+}
+.cdbody{
+    width: 62%;
+    display: grid;
+    align-items: flex-start;
+}
+.cdaddpawn{
+    width: 10%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#detailscd p{
+    width: fit-content;
+     word-wrap: break-word;
+    text-overflow: ellipsis;
+}
+
+#detailscd{
+    display: flex;
+    align-items: center;
+    line-height: 1px;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+}
+.cdaddpawn button{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.323);
+    border: none;
+    transition: 0.2s ease-in-out;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.cdaddpawn button:hover{
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.27);
+    transform: scale(1.05);
 }
