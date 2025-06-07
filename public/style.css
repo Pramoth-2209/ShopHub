@@ -417,10 +417,13 @@ button svg:hover{
     justify-content: center;
     width: 100%;
     margin-top: 50px;
+ 
 }
- #regibtn{
-    width: 15%;
-    padding: 10px;
+ .regibtn button{
+    width: fit-content;
+    text-transform: capitalize;
+    font-size: 20px;
+    padding: 15px;
     background-color: rgb(59, 59, 59);
     color: white;
     border-radius: 10px;
@@ -428,7 +431,7 @@ button svg:hover{
     border: none;
     transition: 0.2s ease-in-out;
 }
- #regibtn:hover{
+ .regibtn button:hover{
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.27);
     transform: scale(1.05);
 }
@@ -646,9 +649,10 @@ table{
 }
 /*customerdetails*/
 .cdhead{
-    margin: 20px auto;
-    width: 85%;
-    margin-bottom: 50px;
+    padding:2% 9% 2% 9%;
+    width: 82%;
+    margin-bottom: 30px;
+    background-color: white;
 
 }
 .cdleft{
@@ -676,7 +680,7 @@ table{
 .cdbody{
     display: flex;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 5px;
 }
 .dbodytail{
     width: 100%;
@@ -691,7 +695,7 @@ table{
 }
 
 .cdbody h2{
-    margin: 0;
+    margin:0px 0px 0px 2px;
 }
 .cdbody  p{
     margin:0px;
@@ -765,4 +769,9 @@ table{
 .dbodytail button:hover{
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.27);
     transform: scale(1.05);
+}
+.cdright{
+    border-radius: 10px;
+    height:100%;
+    padding: 30px 0px 30px 0px;
 }
