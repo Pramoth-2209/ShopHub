@@ -12,43 +12,47 @@
     </div>
     
     <div class="aabody">
-        <div class="achead">
+         <div class="achead">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="70%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-plus-icon lucide-user-plus">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/>
+                        </svg>
             <H2>Add Customer</H2>
         </div>
-    <div class="abody">
-            <div class="aleft">
-                <div class="fields">
-                    <label for="name">Name:</label>
-                    <input type="text" name="names" id="name" required>
+        <div class="abody">
+                <div class="aleft">
+                    <div class="fields">
+                        <label for="name">Name *</label>
+                        <input type="text" name="names" id="name" placeholder="Enter full name" required>
+                    </div>
+                    <div class="fields">
+                        <label for="fathername">Father name *</label>
+                        <input type="text" name="father name" id="fathername" placeholder="Enter father name" required >
+                    </div>
+                    <div class="fields">
+                        <label for="dob">Date Of Birth *</label>
+                        <input type="date" name="dob" id="dob" required>
+                    </div>
+                    <div class="fields">
+                        <label for="phonenumber">Phone No *</label>
+                        <input type="tel" name="phone number" id="phonenumber" placeholder="eg. 9234567890" required>
+                    </div>
+                    <div class="fields">
+                        <label for="occupation">Occupataion *</label>
+                        <input type="text" name="occupation" placeholder="Enter occupation" id="occupation" required>
+                    </div>
                 </div>
-                <div class="fields">
-                    <label for="fathername">Father name:</label>
-                    <input type="text" name="father name" id="fathername" required >
+                <div class="aright">
+                    <div class="fields">
+                        <label for="address">Address *</label>
+                        <textarea name="address" id="address" placeholder="Enter communication address" required></textarea>
+                    </div>       
                 </div>
-                <div class="fields">
-                    <label for="dob">Date Of Birth:</label>
-                    <input type="date" name="dob" id="dob" required>
-                </div>
-                <div class="fields">
-                    <label for="phonenumber">Phone No:</label>
-                    <input type="tel" name="phone number" id="phonenumber" placeholder="eg. 9234567890" required>
-                </div>
-                <div class="fields">
-                    <label for="occupation">Occupataion:</label>
-                    <input type="text" name="occupation" id="occupation" required>
-                </div>
-            </div>
-            <div class="aright">
-                <div class="fields">
-                    <label for="address">Address:</label>
-                    <textarea name="address" id="address" required></textarea>
-                </div>       
-            </div>
-                 
-    </div>
-    <div class="regibtn">
-                    <button onclick="register()" id="regibtn">register</button>
-                 </div> 
+                    
+        </div>
+        <div class="regibtn">
+            <button onclick="register()" id="regibtn">Register</button>
+            <button onclick="register()" id="regibtn">Reset</button>
+        </div> 
     </div>
     
             

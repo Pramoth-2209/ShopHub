@@ -336,94 +336,38 @@ button svg:hover{
 
 /*add customer*/
 
-.abody{
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(600px,1fr));
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    width:90%;
-    border-radius: 10px;
-    margin: 0% auto;
-    transition: 0.4s ease-in-out;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.27);
-    padding: 30px 10px 30px 10px;
-}
-.abody:hover{
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.27);
-    z-index: 9;
-
-}
-.aleft{
-    display: grid;
-    width: 100%;
-}
-.aright{
-    display: grid;
-    width: 100%;
-}
-.aleft input{
-    width: 30%;
-   
-}
-
-.fields{
-    margin-bottom: 10px;
-    display:flex;
-    align-items: center;
-    justify-content:center;
-    padding: 10px;
-    width:auto;
-}
-.fields label{
-    width:20%;
-    margin-left: 0px;
-    font-size: larger;
-    font-weight: bolder;
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    text-align: left;
-}
-.fields input{
+.aabody{
+    background-color:white;
     width: 50%;
-     padding: 10px;
-     font-size: larger;
-     border-radius: 10px;
-     border:1px solid gray;
-      transition: 0.2s ease-in-out;
-
-}
-.fields input:hover{
-   transform: scale(1.05);
-}
-.fields textarea:hover{
-    transform: scale(1.05);
-}
-.fields textarea{
-    resize: none;
-    height: 120px;
-    width: 50%;
-    padding: 10px;
-    font-size: larger;
+    margin: 20px auto;
+    padding: 20px;
     border-radius: 10px;
-     transition: 0.2s ease-in-out;
-   
+    color: gray;
 }
-
-.regibtn{
+.achead{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: baseline;
+    align-items: baseline;
+    gap: 10px;
     width: 100%;
-    margin-top: 50px;
- 
+    margin-top: 10px;
+
 }
- .regibtn button{
-    width: fit-content;
-    text-transform: capitalize;
-    font-size: 20px;
-    padding: 15px;
+.addh{
+    width: 100%;
+}
+.addcust{
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: end;
+    padding-right: 30px;
+    
+}
+.addcust  button{
+    width: 20%;
+    padding: 10px;
+    height: 50px;
     background-color: rgb(59, 59, 59);
     color: white;
     border-radius: 10px;
@@ -431,45 +375,111 @@ button svg:hover{
     border: none;
     transition: 0.2s ease-in-out;
 }
- .regibtn button:hover{
+.addcust button:hover{
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.27);
     transform: scale(1.05);
 }
+.achead svg{
+    height: 32px;
+    width: 32px;
 
+}
+.achead h2{
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 20px 0px 30px 0px;
+    color: black;
+}
+.acbody{
 
-.achead{
-    margin-left:0px;
-    padding-left: 73px;
+}
+.aleft{
+    display: grid;
+    width:100%;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+.aright{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.aabody .fields{
+    width: 100%;
+    display: grid;
+}
+.fields label{
+    width: 100%;
+    font-size: large;
+    padding-bottom: 3px;
+    font-weight:600;
+}
+.fields input{
+    height: 25px;
+    width:auto;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 10px;
+}
+.fields textarea{
+    height: 100px;
+    resize: none;
+    padding: 10px;
+    border-radius: 10px ;
+}
+.regibtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
     margin-bottom: 10px;
-    margin-top: 60px;
 }
-
-.achead h1{
-    margin-top: 0px;
+.regibtn button{
+    width: 40%;
+    padding: 10px;
+    height: 50px;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.323);
+    border: none;
+    transition: 0.2s ease-in-out;
 }
-
+.regibtn button:hover{
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.27);
+    transform: scale(1.05);
+}
 /*total pawns*/
 
 .tpdisplay{
-    
-    width: 90%;
-    margin: 10px auto;
-    
-}
-.tpdisplay table{
     background-color: white;
     width: 90%;
+    margin: 25px auto;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+.tpdisplay .achead{
+    padding: 10px 0px 20px 0px;
+}
+.tpdisplay h2{
+    margin: 0px 10px 0px 0px;
+}
+
+.tpdisplay table{
+    background-color: white;
+    width: 100%;
     align-items: center;
-    border-collapse: collapse;
     justify-content: center;
     margin:10px auto;
-    border-radius: 10px;
-     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.27);
+    border-collapse: collapse;
+    border: 1px solid gray;
+    
 }
 th{
     background-color: rgb(59, 59, 59);
     color: white;
 }
+
 th,td{
    
     padding:12px 15px;
@@ -486,10 +496,22 @@ th,td{
 }
 
 /*totalcustomer*/
+.acbody{
+    width: 90%;
+    margin: 25px auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
 
+}
+.acbody .achead h2{
+width: 100%;
+padding: 0px 0px 0px 40px;
+margin: 0;
+}
 .tcbody{
     margin:3% auto;
-    width: 90%;
+    width: 95%;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
     gap: 30px;
@@ -549,12 +571,12 @@ a{
 }
 .mcard{
     padding: 10px;
-    background-color:white;
+    background-color:rgb(238, 238, 238);
     color: black;
     height: fit-content;
     width: fit-content;
     border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.329);
     transition: 0.2s ease-in-out;
 
 }
@@ -563,7 +585,7 @@ a{
     color: white;
 }*/
 .mcard:hover{
-    box-shadow: 24px 24px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 24px 24px 20px rgba(0, 0, 0, 0.311);
     transform: scale(1.02);
     }
    
@@ -688,6 +710,7 @@ table{
     align-items: baseline;
     justify-content: end;
     text-align: end;
+    gap: 80px;
     margin-right: 30px;
 }
 .cdbodyhead{
@@ -758,7 +781,7 @@ table{
 }
 .dbodytail button{
     width: fit-content;
-    padding: 10px;
+    padding: 5px;
     background-color: rgb(59, 59, 59);
     color: white;
     border-radius: 10px;
@@ -774,4 +797,35 @@ table{
     border-radius: 10px;
     height:100%;
     padding: 30px 0px 30px 0px;
+}
+.dbodytail p{
+    margin: 0;
+}
+.acbody .dbodytail{
+    gap: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.acbody .dbodytail input{
+    width: 300px;
+    padding: 15px;
+
+   
+}
+.searchs{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+}
+.searchs input{
+    border-radius: 10px;
+    border: 1px solid rgb(59, 59, 59);
+}
+.addb{
+    width: 40%;
+    
 }
