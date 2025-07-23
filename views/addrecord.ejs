@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div>
+        <%-include('partials/navbar')%>
+    </div>
+    <form action="/addrecorddetails" method="post" enctype="multipart/form-data">
+    <div class="aabody">
+        <div class="achead">
+            <h2>Add Record</h2>
+        </div>
+        <div class="abody">
+            
+            <div class="aleft">
+                 <div class="fields">
+                    <label for="ip">Customer id</label>
+                    <input type="text" id="customerId" name="customerId" placeholder="customer id" value="<%=customerid%>">
+                </div>
+                <div class="fields">
+                    <label for="ip">Product name</label>
+                    <input type="text" id="productName" name="productName" placeholder="Enter product name">
+                </div>
+                <div class="fields">
+                    <label for="productType">Product type</label>
+                    <select name="productType" id="productType">
+                        <option value="">select product type</option>
+                        <option value="gold">gold</option>
+                        <option value="gold">silver</option>
+                        <option value="gold">diamont</option>
+                    </select>
+                </div>
+                <div class="fields">
+                    <label for="ipe">Product weight</label>
+                    <input type="text" id="productWeight" name="productWeight" placeholder="weight">
+                </div>
+                <div class="fields">
+                    <label for="ips">Estimated amount</label>
+                    <input type="text" id="estimatedAmount" name="estimatedAmount" placeholder="Enter loan amount">
+                </div>
+                <div class="fields">
+                    <label for="ips">Loan amount</label>
+                    <input type="text" id="loanAmount" name="loanAmount" placeholder="Enter loan amount">
+                </div>
+                <div class="fields">
+                    <label for="ipp">Interest rate</label>
+                    <input type="text" id="intrestRate" name="intrestRate" placeholder="Enter interest rate">
+                </div>
+                <div class="fields">
+                    <label for="ipd">Due date</label>
+                    <input type="date" name="dueDate" id="dueDate" placeholder="Enter due date">
+                </div>
+                 <div class="fields">
+                    <label for="ipd">Product photo</label>
+                    <input type="file" name="productPhoto"  id="productPhoto" accept="image/*" placeholder="Enter due date">
+                </div>
+                <div class="fields">
+                    <label for="productstatus">Product status</label>
+                    <select name="productstatus" id="productstatus">
+                        <option value="">select product status</option>
+                        <option value="open">open</option>
+                        <option value="closed">closed</option>
+                    </select>
+                </div>
+                <div class="fields">
+                    <label for="closeddate">Product closed date</label>
+                    <input type="date" name="productcloseddate" id="productcloseddate" placeholder="closed date">
+                </div>
+            </div>
+            
+        </div>
+        <div class="regibtns">
+                <button onclick="sub()" id="regibtn">Add Record</button>
+        </div>
+        
+    </div></form>
+    
+</body>
+<script src="script.js"></script>
+</html>

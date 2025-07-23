@@ -4,62 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    
     <div class="navs">
         <%-include('partials/navbar')%>
     </div>
     
     <div class="aabody">
          <div class="achead">
-            <H2>Add Customer</H2>
+            <H2>Edit Customer Details</H2>
         </div>
-        <form action="/add" method="POST" enctype="multipart/form-data">
+        <%for(var i=0;i< customersdetail.length;i++){%>
+        <form action="/edit/<%=customersdetail[i].id%>" method="POST" enctype="multipart/form-data">
+            
             <div class="abody">
-                
                     <div class="aleft">
                         <div class="fields">
                             <label for="name">Name<strong>*</strong></label>
-                            <input type="text" name="name" id="name" placeholder="Enter full name" required>
+                            <input type="text" name="name" id="name" value="<%=customersdetail[i].name%>" placeholder="Enter full name" required >
                         </div>
                         <div class="fields">
                             <label for="fathername">Father name<strong>*</strong></label>
-                            <input type="text" name="father_name" id="fathername" placeholder="Enter father name" required >
+                            <input type="text" name="father_name" id="fathername" value="<%=customersdetail[i].father_name%>" placeholder="Enter father name" required >
                         </div>
                         <div class="fields">
                             <label for="dob">Date Of Birth<strong>*</strong></label>
-                            <input type="date" name="date_of_birth" id="dob" required>
+                            <input type="date" name="date_of_birth" value="<%=customersdetail[i].date_of_birth%>" id="dob" required>
                         </div>
                         <div class="fields">
                             <label for="phonenumber">Phone No<strong>*</strong></label>
-                            <input type="tel" name="phone_number" id="phonenumber" placeholder="eg. 9234567890" required>
+                            <input type="tel" name="phone_number" id="phonenumber" value="<%=customersdetail[i].phone_number%>" placeholder="eg. 9234567890" required>
                         </div>
                         <div class="fields">
                             <label for="occupation">Occupation<strong>*</strong></label>
-                            <input type="text" name="occupation" placeholder="Enter occupation" id="occupation" required>
+                            <input type="text" name="occupation" placeholder="Enter occupation" value="<%=customersdetail[i].occupation%>" id="occupation" required>
                         </div>
                         <div class="fields">
                             <label for="customerphoto">Customer Photo<strong>*</strong></label>
-                            <input type="file" name="photo" id="customerphoto"  accept="image/*" required>
+                            <input type="file" name="photo" id="customerphoto" accept="image/*" required>
                         </div>
                     </div>
                     <div class="aright">
                         <div class="fields">
                             <label for="address">Address<strong>*</strong></label>
-                            <textarea name="address" id="address" placeholder="Enter communication address" required></textarea>
+                            <textarea name="address" id="address" placeholder="Enter communication address"  required><%=customersdetail[i].address%></textarea>
                         </div>       
-                    </div>
-                        
+                    </div>       
             </div>
             <div class="regibtn">
-                <button onclick="register()" id="regibtn" type="submit">Register</button>
-                <button type="reset" id="regibtn">Reset</button>
+                <button id="regibtn" type="submit">Edit</button>
             </div> 
-        </form>
-    </div>
-    
             
+        </form>
+        <%}%>
+        
+    </div>
+   
+    
+
+
 </body>
-<script src="script.js"></script>
+<script src="/script.js"></script>
 </html>

@@ -23,6 +23,7 @@ function register(){
     if(!name||!fathername||!dob||!phonenumber||!occupation||!address){
         alert("all fields need to be filled")
     }
+   
 
     fetch("http://localhost:3000/addcustomer",{
         method:"post",

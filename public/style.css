@@ -199,10 +199,9 @@ button svg:hover{
     display: flex;
 }
 .searchbar input{
-    width: 300px;
+    width: 500px;
     padding: 10px;
     font-size: larger;
-    font-weight: bolder;
     border-radius: 10px;
     border: none;
     outline: none;
@@ -339,8 +338,8 @@ button svg:hover{
 .aabody{
     background-color:white;
     width: 50%;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 30px auto;
+    padding: 30px;
     border-radius: 10px;
     color: gray;
 }
@@ -351,9 +350,10 @@ button svg:hover{
     align-items: center;
     gap: 10px;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 0px;
 
 }
+
 .aabody .achead{
     display: flex;
     align-items: baseline;
@@ -392,13 +392,37 @@ button svg:hover{
 
 }
 .achead h2{
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bolder;
-    margin: 20px 0px 30px 0px;
+    margin: 0px 0px 30px 0px;
     color: black;
 }
-.acbody{
 
+.regibtns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.fields select{
+    padding: 5px;
+}
+.regibtns button{
+    width: 30%;
+    padding: 10px;
+    height: 50px;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.323);
+    border: none;
+    transition: 0.2s ease-in-out;
+}
+.regibtns button:hover{
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.27);
+    transform: scale(1.05);
 }
 .aleft{
     display: grid;
@@ -413,25 +437,34 @@ button svg:hover{
 .aabody .fields{
     width: 100%;
     display: grid;
+    margin-bottom: 10px;
 }
 .fields label{
     width: 100%;
-    font-size: large;
-    padding-bottom: 3px;
-    font-weight:600;
+    padding-bottom: 5px;
+    font-weight:bold;
+    color: #000;
+    font-size: 14px;
 }
 .fields input{
     height: 25px;
     width:auto;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid gray;
-    padding: 10px;
+    padding: 5px;
+    font-size: 14px;
+}
+strong{
+    color: red;
+    font-size: larger;
 }
 .fields textarea{
     height: 100px;
     resize: none;
-    padding: 10px;
-    border-radius: 10px ;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 .regibtn{
     display: flex;
@@ -441,7 +474,7 @@ button svg:hover{
     margin-bottom: 10px;
 }
 .regibtn button{
-    width: 40%;
+    width: 30%;
     padding: 10px;
     height: 50px;
     background-color: rgb(59, 59, 59);
@@ -450,6 +483,7 @@ button svg:hover{
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.323);
     border: none;
     transition: 0.2s ease-in-out;
+    font-size: 14px;
 }
 .regibtn button:hover{
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.27);
@@ -459,10 +493,11 @@ button svg:hover{
 
 .tpdisplay{
     background-color: white;
-    width: 90%;
-    margin: 5px auto;
+    width: 97%;
+    margin: 10px auto;
     padding: 10px;
     border-radius: 10px;
+  
     
 }
 .tpdisplay .achead{
@@ -470,6 +505,9 @@ button svg:hover{
 }
 .tpdisplay h2{
     margin: 0px 10px 0px 0px;
+}
+.tpdisplay{
+    overflow-x: auto;
 }
 
 .tpdisplay table{
@@ -582,6 +620,7 @@ a{
     color: black;
     height: fit-content;
     width: fit-content;
+    min-width: 400px;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.329);
     transition: 0.2s ease-in-out;
@@ -653,6 +692,17 @@ align-items: center;
 justify-content: center;
 padding: 10px 0px 10px 0px;
 }
+#detailss span{
+    font-size: 19px;
+     color:rgb(68, 146, 255);
+}
+#detailscd span{
+    color:rgb(68, 146, 255);
+}
+#detailsvg img{
+    height: 80px;
+    width: 80px;
+}
 table{
     text-transform: capitalize;
 }
@@ -678,12 +728,13 @@ table{
 }
 /*customerdetails*/
 .cdhead{
-    padding:2% 9% 2% 9%;
-    width: 82%;
-    margin-bottom: 30px;
+    padding:2% 3% 2% 3%;
+    width: 94%;
+    margin-bottom: 10px;
     background-color: white;
 
 }
+
 .cdleft{
     display: flex;
     width: 100%;
@@ -695,9 +746,9 @@ table{
     justify-content: center;
 }
 .cphoto img{
-    height: 110px;
-    width: 110px;
-    padding: 10px;
+    height: 130px;
+    width: 130px;
+    padding: 0px;
     border-radius: 100%;
     background-color:white;
     border: 1px solid;
@@ -740,16 +791,15 @@ table{
     display: flex;
     align-items: center;
     gap: 5px;
-    width: 100%;
-    padding: 5px;
+    width: auto;
+    padding: 2px;
     border-radius: 10px;
-    width: 100%;
     
 }
 
 .detailscd{
     display: flex;
-    width: 50%;
+    width: 80%;
 
 }
 .dcdhead{
@@ -758,6 +808,11 @@ table{
 .dcdtail{
     width: 100%;
     
+}
+.sb{
+    font-size:29px;
+    padding-top: 30px;
+    margin-left: 70px;
 }
 #detailscd { 
     display: flex;
@@ -827,14 +882,29 @@ table{
     text-align:center;
 }
 .dbodytails{
-    display: flex;
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,2fr));
+    width: fit-content;
+    height: 130px;
     align-items: baseline;
+    text-align: end;
     justify-content: end;
+    border-radius: 10px;
 }
+
+.pbutton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    width: 100%;
+}
+
 .dbodytails button{
     width:fit-content;
-    padding: 5px;
+    padding: 0px 10px;
+    margin-right: 0px;
     background-color: rgb(59, 59, 59);
     color: white;
     border-radius: 10px;
@@ -867,7 +937,10 @@ table{
 }
 .dates{
     display: flex;
+    align-items: end;
+    justify-content: end;
     padding: 15px;
+    padding-right:50px;
 }
 .dates #datetime{
     margin: 0;

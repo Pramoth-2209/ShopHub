@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>searchbar</h2>
+    <div class="navs">
+        <%-include('partials/navbar')%>
+    </div>
+    <h2 class="sb">searchbar <span><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg></span></h2>
+    
+    <div class="acbody">
+      <div class="tcbody">
+            <a href="customerdetails">
+            <div class="mcard">
+                <div class="ccards">
+                    <div class="cchead">
+                        <!--<img src="/icons/history.svg" alt="">-->
+                        <div id="detailsvg">
+                            <img src="<%=sr.photo_path%>" alt="">
+                        </div>
+                        <div id="detailss">
+                            <h2><%=sr.name%><br><span>CID:<%=sr.id%></span></h2> 
+                        </div>
+                    </div>
+                    <div class="ccbody">
+                        
+                        <div id="details">
+                            <label for=""><b>D.O.B:</b></label>
+                            <p> <%=sr.date_of_birth%> </p>
+                        </div>
+                        <div id="details">
+                            <label for=""><b>Father Name:</b></label>
+                            <p> <%=sr.father_name%></p>
+                        </div>
+                        <div id="details">
+                            <label for=""><b>Phone No.:</b></label>
+                            <p> <%=sr.phone_number%></p>
+                        </div>
+                        <div id="details">
+                        <label for=""><b>Address:</b></label>
+                        <p><%=sr.address%></p>
+                    </div>
+                    </div>
+                </div>
+            </div></a>
+        </div>
+        
+    </div> 
+   
 </body>
+<script src="script.js"></script>
 </html>
