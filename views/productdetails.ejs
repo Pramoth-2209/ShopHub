@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+   
+    <div>
+        <div class="pdhead">
+            <div class="pimage">
+                <img src="<%=pds.product_image%>" alt="">
+            </div>
+            <div class="ipdetails">
+                
+                <div class="ipright">
+                    <div class="hedding">
+                        <h3>Product Detail</h3>
+                    </div>
+                    <div id="ipinfos">
+                        <label for="">Product id</label>
+                        <p>: <%=pds.product_id%></p>
+                    </div>
+                    <div id="ipinfos">
+                        <label for="">Product name</label>
+                        <p>: <%=pds.product_name%></p>
+                    </div>
+                    <div id="ipinfos">
+                        <label for="">Pawned date</label>
+                        <p>: <%=new Date(pds.product_opened_date).toDateString()%></p>
+                    </div>
+                    <div id="ipinfos">
+                        <label for="">Product type</label>
+                        <p>: <%=pds.product_type%></p>
+                    </div>
+                    <div id="ipinfos">
+                        <label for="">Product weight</label>
+                        <p>: <%=pds.product_weight%> g</p>
+                    </div>
+                
+                    <div id="ipinfos">
+                        <label for="">Estimated amount</label>
+                        <p>: ₹.<%=pds.estimated_amount%></p>
+                    </div>
+                    <div id="ipinfos">
+                        <label for="">Loan amount</label>
+                        <p>: ₹.<%=pds.loan_amount%></p>
+                    </div>
+                    <div id="ipinfos">
+                        <label for="">Intrest rate</label>
+                        <p>: <%=pds.interest_rate%> %</p>
+                    </div>
+                    <div id="ipinfos">
+                        <label for="">Due date</label>
+                        <p>: <%=new Date(pds.due_date).toDateString()%></p>
+                    </div>
+                    <div id="ipinfos">
+                         <label for="">Product Status</label>
+                        <%if(pds.product_status==="open"){%>
+                            <p id="statusip">: <%=pds.product_status%> </p>
+                        <%}else if(pds.product_status==="auctioned"){%>
+                            <p id="astatusip">: <%=pds.product_status%> </p>
+                        <%}else{%>
+                            <p id="cstatusip">: <%=pds.product_status%></p>
+                        <%}%>
+
+                    </div>
+                    <div class="intrest">
+                        <% let st=pds.product_status%>
+                        <% if(st=="open"){%>
+                        <a href="/addintrest/<%=pds.product_id%>"><button>Add Intrest</button></a>
+                        <a href="/closepawn/<%=pds.product_id%>"><button>Close Pawn</button></a>
+                        <%}else if(st=="closed"){%>
+                            <div class="idsk">
+                                <div id="idskm">
+                                    <label for="">product closed at</label>
+                                    <p id="cstatusip" class="pca"> : <%=new Date(pds.close_date).toDateString()%> </p>
+                                </div>
+                                <div id="idskm">
+                                <label for="">Amount paid by</label>
+                                <p id="cstatusip" class="pca"> : <%=pds.cname%> </p>
+                                </div>
+                            </div>
+                        <%} else if(st=="auctioned"){%>
+                            <div class="idsk">
+                                <div id="idskm">
+                                    <label for="">product auctioned at:</label>
+                                    <p class="pca" id="astatusip">: <%=new Date(pds.close_date).toDateString()%></p>
+                                </div>
+                            </div>
+                        <%}else{%>
+                            <p>err</p>
+                        <%}%>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pdbody">
+        <div class="idheading">
+                <h2>Intrest Details</h2>
+        </div>
+        <div class="tpdisplay">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Due id</th>
+                        <th>Product id</th>
+                        <th>Date of payment</th>
+                        <th>Amount paid</th>
+                        <th>payment mode</th>
+                        <th>Paid by</th>
+                    </tr>
+                </thead>
+                <%for(var i=0;i< due.length;i++){%>
+                <tbody>
+                    <tr>
+                        <td><%=due[i].due_id%></td>
+                        <td><%=due[i].product_id%></td>
+                        <td><%=new Date(due[i].payment_date).toDateString()%></td>
+                        <td><%=due[i].due_amount_paid%></td>
+                        <td><%=due[i].mode%></td>
+                        <td><%=due[i].name%></td>
+                    </tr>
+                </tbody>
+                <%}%>
+            </table>
+        </div>
+        </div>
+    </div>
+  
+</body>
+</html>

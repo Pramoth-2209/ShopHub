@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="navs">
+        <%-include('partials/navbar')%>
+    </div>
+    <div class="aabody">
+        <div class="achead">
+            <h2>close pawn</h2>
+        </div>
+        <form action="/clspawn" method="post">
+            <div class="abody">
+                
+                <div class="acleft">
+                    <div class="cfields">
+                        <label for="ip">Product id </label>
+                        <input type="text" id="cpproductId" name="cpproductId" placeholder="product id" value="<%=ids.product_id%>" required readonly>
+                    </div>
+                    <div class="cfields">
+                        <label for="ip">Loan amount ₹.</label>
+                        <input type="text" value="<%=ids.loan_amount%>" name="cploanamount" id="cploanamount" readonly >
+                    </div>
+                    <div class="cfields">
+                        <label for="ip">Amount paid </label>
+                        <input type="number" id="cpamountpaid" name="cpamountpaid" required>
+                    </div>
+                    <div class="cfields">
+                        <label for="ip" id="pmi">status </label>
+                        <select name="cpstatus" id="cpstatus" required>
+                            <option value="">Select option</option>
+                            <option value="closed">closed</option>
+                            <option value="auctioned">auction</option>
+                        </select>
+                    </div>
+                    <div class="cfields">
+                        <label for="ip">Name </label>
+                        <input type="text" id="cpname" name="cpname" placeholder="amount paid by" value="" required>
+                    </div>
+                </div>
+                <div class="regibtns">
+                    <button id="clspawnbtn">close</button>
+                </div>
+       
+            </div>
+         </form>
+    </div>
+</body>
+<script src="/script.js"></script>
+</html>

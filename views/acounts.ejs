@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div>
+        <%-include('partials/navbar')%>
+    </div>
+    <div class="summa">
+        <div>
+            <div class="dbodytailm">
+                <div class="divfilter">
+                <button id="filter">
+                    <div class="addpwan">
+                        <div class="pawns">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-filter-icon lucide-list-filter"><path d="M3 6h18"/><path d="M7 12h10"/><path d="M10 18h4"/></svg>
+                        </div>
+                        <div>
+                             <p>Filter</p>
+                        </div> 
+                    </div>
+                </button>
+                </div>
+            </div>
+            <div class="filopt">
+            <form action="/filter" method="post" id="opt" style="display: none;">
+                <div class="aabody">
+                <div class="abody">
+                    
+                    <div class="aleftf">
+                        <div class="fields">
+                            <label for="ip">Date </label>
+                            <select name="filterdate" id="filterdate">
+                                <option value="">select date</option>
+                                <%for(var i=1;i<=31;i++){%>
+                                    <option value="<%=i%>"><%=i%></option>
+                                <%}%>
+                            </select>
+                        </div>
+                        <div class="fields">
+                            <label for="ip">Month</label>
+                            <select name="filtermonth" id="filtermonth">
+                                <option value="">select month</option>
+                                <%for(var i=1;i<=12;i++){%>
+                                    <option value="<%=i%>"><%=i%></option>
+                                <%}%>
+                            </select>
+                        </div>
+                        <div class="fields">
+                            <label for="ipe">year</label>
+                            <input type="number" id="filteryear" name="filteryear">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="regibtns">
+                        <button onclick="sub()" id="regibtn">Apply Filter</button>
+                </div>
+
+            </div>
+        </form>
+          </div>
+        </div>
+        <div class="lnp">
+           <div class="lent">
+                <label for="l">Amount lent: </label>
+                <%if(message){%>
+                    <p><%=message%></p>
+                <%}else{%>
+                <%if(bb.gg){%>
+                    <p>₹.<%=bb.gg%></p>  
+                <%}else if(bb.mm){%>                 
+                <p>₹.<%=bb.mm%></p> 
+                <%}else if(bb.dd){%>               
+                <p>₹.<%=bb.dd%></p>
+                <%}else if(bb.yy){%>             
+                <p>₹.<%=bb.yy%></p>
+                <%}else if(bb.ff){%>                  
+                <p>₹.<%=bb.ff%></p>
+                <%}else{%>
+                   <p>₹.0</p> 
+                <%}%> <%}%>       
+           </div>
+           <div class="profit">
+                <label for="p">Profit: </label>
+                <%if(message){%>
+                    <p><%=message%></p>
+                <%}else{%>
+                <%if(bb.ggg){%>
+                    <p>₹.<%=bb.ggg%></p>  
+                <%}else if(bb.mmm){%>                 
+                <p>₹.<%=bb.mmm%></p> 
+                <%}else if(bb.ddd){%>               
+                <p>₹.<%=bb.ddd%></p>
+                <%}else if(bb.yyy){%>             
+                <p>₹.<%=bb.yyy%></p>
+                <%}else if(bb.fff){%>                  
+                <p>₹.<%=bb.fff%></p>
+                <%}else{%>
+                   <p>₹.0</p> 
+                <%}%>     <%}%> 
+           </div>
+           
+        </div>
+        <div class="dtable">
+        <div class="tpdisplays">
+        <table>
+            <thead>
+                <tr>
+                    <th>product id</th>
+                    <th>customer id</th>
+                    <th>product name</th>
+                    <th>loan amount</th>
+                    
+                    </tr>
+            </thead>
+            <tbody>
+                <%for(var i=0;i< df.length;i++){%>
+                    <%if(df.length===0){%>
+                        <p>no matching records found</p>
+                    <%}else{%>
+                <tr>
+                    <td><%=df[i].product_id%></td>
+                    <td><%=df[i].cid%></td>
+                    <td><%=df[i].product_name%></td>
+                    <td><%=df[i].loan_amount%></td>
+                </tr>
+                <%}%>
+                <%}%>
+            </tbody>
+        </table>
+        </div>
+         <div class="tpdisplays">
+        <table>
+            <thead>
+                
+                <tr>
+                    <th>due id</th>
+                    <th>product id</th>
+                    <th>due amount</th>
+                    </tr>
+               
+            </thead>
+            <tbody>
+                <%for(var i=0;i< df.length;i++){%>
+
+                <tr>
+                    <td><%=df[i].due_id%></td>
+                    <td><%=df[i].pro_id%></td>
+                    <td><%=df[i].due_amount_paid%></td>
+                </tr>
+                <%}%>
+            </tbody>
+        </table>
+        </div>
+        </div>
+    </div>
+</body>
+<script>
+   document.getElementById('filter').addEventListener('click',function(){
+     const aa=document.getElementById('opt');
+     if(aa.style.display==="none"||aa.style.display==""){
+        aa.style.display="block";
+     }else{
+        aa.style.display="none"
+     }
+   })
+</script>
+<script src="/script.js"></script>
+</html>

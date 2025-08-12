@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="navs">
+        <%-include('partials/navbar')%>
+    </div>
+    <div class="aabody">
+        <div class="achead">
+            <h2>Intrest Payment</h2>
+        </div>
+        <form action="/intrest" method="post">
+            <div class="abody">
+                
+                <div class="acleft">
+                    <div class="cfields">
+                        <label for="ip">Product id </label>
+                        <input type="text" id="productId" name="productId" placeholder="product id" value="<%=ids%>" required readonly>
+                    </div>
+                    <div class="cfields">
+                        <label for="ip">Intrest Amount </label>
+                        <input type="number" id="intrestamount" name="intrestpaid" value="" required>
+                    </div>
+                    <div class="cfields">
+                        <label for="ip">Amount Paid </label>
+                        <input type="number" id="amountpaid" name="amountpaid" placeholder="enter amount" value="" required>
+                    </div>
+                    <div class="cfields">
+                        <label for="ip" id="pmi">Payment method </label>
+                        <select name="paymentmethod" id="paymentmethod" required>
+                            <option value="">Select option</option>
+                            <option value="cash">cash</option>
+                            <option value="g-pay">g-pay</option>
+                        </select>
+                    </div>
+                    <div class="cfields">
+                        <label for="ip">Name </label>
+                        <input type="text" id="ipname" name="ipname" placeholder="intrest paid by" value="" required>
+                    </div>
+                </div>
+                <div class="regibtns">
+                    <button onclick="sub()" id="addintrest">Add</button>
+                </div>
+       
+            </div>
+         </form>
+    </div>
+</body>
+<script src="/script.js"></script>
+</html>

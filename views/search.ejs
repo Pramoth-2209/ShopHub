@@ -10,39 +10,43 @@
     <div class="navs">
         <%-include('partials/navbar')%>
     </div>
-    <h2 class="sb">searchbar <span><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg></span></h2>
     
+    <%for(var i=0;i< sr.length;i++){%>
     <div class="acbody">
+         <div class="achead">
+           <h2 class="">searchbar <span><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg></span></h2>
+        </div>
+        
       <div class="tcbody">
-            <a href="customerdetails">
+            <a href="customerdetails/<%=sr[i].id%>">
             <div class="mcard">
                 <div class="ccards">
                     <div class="cchead">
                         <!--<img src="/icons/history.svg" alt="">-->
                         <div id="detailsvg">
-                            <img src="<%=sr.photo_path%>" alt="">
+                            <img src="<%=sr[i].photo_path%>" alt="">
                         </div>
                         <div id="detailss">
-                            <h2><%=sr.name%><br><span>CID:<%=sr.id%></span></h2> 
+                            <h2><%=sr[i].name%><br><span>CID:<%=sr[i].id%></span></h2> 
                         </div>
                     </div>
                     <div class="ccbody">
                         
                         <div id="details">
                             <label for=""><b>D.O.B:</b></label>
-                            <p> <%=sr.date_of_birth%> </p>
+                            <p> <%=sr[i].date_of_birth%> </p>
                         </div>
                         <div id="details">
                             <label for=""><b>Father Name:</b></label>
-                            <p> <%=sr.father_name%></p>
+                            <p> <%=sr[i].father_name%></p>
                         </div>
                         <div id="details">
                             <label for=""><b>Phone No.:</b></label>
-                            <p> <%=sr.phone_number%></p>
+                            <p> <%=sr[i].phone_number%></p>
                         </div>
                         <div id="details">
                         <label for=""><b>Address:</b></label>
-                        <p><%=sr.address%></p>
+                        <p><%=sr[i].address%></p>
                     </div>
                     </div>
                 </div>
@@ -50,6 +54,7 @@
         </div>
         
     </div> 
+    <%}%>
    
 </body>
 <script src="script.js"></script>

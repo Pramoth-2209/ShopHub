@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    
+    <div class="navs">
+        <%-include('partials/navbar')%>
+    </div>
+    <div>
+        <div class="tpdisplaym">
+            <div class="acheadc">
+                <div class="addhs">
+                    <h2>Closed Pawns</h2>
+                </div>
+                </div>
+                <table>
+                     
+                    <div class="thone">
+                        <div class="thtwo" id="tpgold">
+                            <h4>Closed Gold Pawn:</h4><span><h1><%=formatd(cls.gold)%></h1></span>
+                        </div>
+                        <div class="thtwo" id="tpsilver">
+                            <h4>Closed Silver Pawn:</h4><span><h1><%=formatd(cls.silver)%></h1></span>
+                        </div>
+                        <div class="thtwo" id="tpdiamond">
+                            <h4>Closed Diamon Pawn:</h4><span><h1><%=formatd(cls.diamond)%></h1></span>
+                        </div>
+                        <div class="thtwo">
+                            <h4>Total Closed Pawns:</h4><span><h1><%=formatd(cls.ap)%></h1></span>
+                        </div>
+                        
+                    </div>
+                    <thead>
+                        <tr> 
+                            <th>Customer id</th>
+                            <th>product id</th>
+                            <th>Product Name</th>
+                            <th>Product type</th>
+                            <th>Pawn date</th>
+                            <th>amount</th>
+                            <th>Product details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <% for(var i=0;i< closed.length;i++){%>
+                        <tr>
+                            <td><%=closed[i].cid%></td>
+                            <td><%=closed[i].product_id%></td>
+                            <td><%=closed[i].product_name%></td>
+                            <td><%=closed[i].product_type%></td>
+                            <td><%=new Date(closed[i].product_opened_date).toDateString()%></td>
+                            <td>₹.<%=closed[i].loan_amount%></td>
+                            <td><a href="/productdetails/<%=closed[i].product_id%>">show detail</a></td>
+                        </tr>
+                     <%}%>   
+                    </tbody>
+                    
+                </table>
+            </div>
+        </div>
+   
+   
+</body>
+<script src="script.js"></script>
+</html>
