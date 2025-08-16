@@ -7,6 +7,8 @@ const fs = require('fs');
 const expresslayout=require('express-ejs-layouts');
 const { error } = require('console');
 const app=express();
+const dotenv = require("dotenv");
+dotenv.config()
 
 app.use(bodyparser.urlencoded({extended:true}))
 app.set("view engine","ejs")
@@ -15,9 +17,9 @@ app.use(express.static('public'))
 
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'root',
-  password: 'root',
-  database: 'testdb'
+  user: process.env.MYSQL_USER,
+  password: process.env.MYSQL_PASSWORD,
+  database: process.env.MYSQL_DATA_BASE_NAME
 });
 db.connect();
 
