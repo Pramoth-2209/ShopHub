@@ -8,7 +8,7 @@
 </head>
 <body>
     <div>
-       <%-include('partials/navbar')%>
+       <%-include('partials/dashnavbar')%>
     </div>
         <div class="searchbar">
             <form action="/search" method="get">
@@ -17,127 +17,151 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
             </form>
         </div>
-        <div>
-        <div>
-     <div class="dashcards">
-            <a href="addcustomer">
-                <div class="addcustomer" id="cards">
-                    <div id="counttp">
-                        <div class="svg">
-                        <h3><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="70%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-plus-icon lucide-user-plus">
-                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/>
-                        </svg></h3>
-                    </div>
-                    <div id="value">
-                        <h1>Add</h1>
-                        <div id="titledb">
-                            <h3>New Customer</h3>
-                        </div>
-                    </div>
-                    </div>
-                    
-                </div>
-            </a>
-            <a href="totalcustomer">
-                <div class="totalcustomer" id="cards">
-                    <div id="counttp">
-                        <div class="svg">
-                            <h3><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="70%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg></h3>
-                        </div>
-                        <div id="value">
-                            <h1><%=formatd(total.total)%></h1>
+    <div>
+        <div class="bbb">
+            <div class="dashcards">
+                <div class="mcar">
+                <a href="addcustomer">
+                    <div class="addcustomer" id="cards">
+                        <div id="counttp">
+                            <div class="svg">
+                                <h3><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="70%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-plus-icon lucide-user-plus">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/>
+                                </svg></h3>
+                            </div>
+                            <div id="value">
+                                <h1>Add</h1>
                                 <div id="titledb">
-                            <h3>Total Customer</h3>
-                    </div>
+                                    <h3>New Customer</h3>
+                                </div>
+                            </div>
                         </div>
-                    </div>
                     
-                </div>
-            </a>
-            <a href="totalpawn">
-                <div class="totalpawn" id="cards">
-                    <div id="counttp">
-                        <div class="svg">
-                            <h3><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="70%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gem-icon lucide-gem"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg></h3>
-                        </div>
-                        <div id="value">
-                        <h1><%=formatd(total.ap)%></h1>
-                        <div id="titledb">                
-                            <h3>Active Pawn</h3>
-                        </div>
-                        </div>
                     </div>
+                </a>
+                <a href="totalcustomer">
+                    <div class="totalcustomer" id="cards">
+                        <div id="counttp">
+                            <div class="svg">
+                                <h3><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="70%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg></h3>
+                            </div>
+                            <div id="value">
+                                <h1><%=formatd(total.total)%></h1>
+                                <div id="titledb">
+                                    <h3>Total Customer</h3>
+                                </div>
+                            </div>
+                        </div>
                     
+                    </div>
+                </a>
+                <a href="totalpawn">
+                    <div class="totalpawn" id="cards">
+                        <div id="counttp">
+                            <div class="svg">
+                                <h3><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="70%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gem-icon lucide-gem"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg></h3>
+                            </div>
+                            <div id="value">
+                                <h1><%=formatd(total.ap)%></h1>
+                                <div id="titledb">                
+                                    <h3>Active Pawn</h3>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </a>
+                <a href="tclosedpawn">
+                    <div class="totalpawn" id="cards">
+                        <div id="counttp">
+                            <div class="svg">
+                                <h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-x-icon lucide-circle-x"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg></h3>
+                            </div>
+                            <div id="value">
+                                <h1><%=formatd(total.cls)%></h1>
+                                <div id="titledb">                
+                                    <h3>closed Pawn</h3>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </a>
+                <a href="tauctionedpawn">
+                    <div class="totalpawn" id="cards">
+                        <div id="counttp">
+                            <div class="svg">
+                                <h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell-ring-icon lucide-bell-ring"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M22 8c0-2.3-.8-4.3-2-6"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/><path d="M4 2C2.8 3.7 2 5.7 2 8"/></svg></h3>
+                            </div>
+                            <div id="value">
+                                <h1><%=formatd(total.auc)%></h1>
+                                <div id="titledb">                
+                                    <h3>Auctioned Pawn</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="acounts">
+                    <div class="amountlent" id="cards">
+                        <div id="counttp">
+                            <div class="svg">
+                                <h3><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="70%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-landmark-icon lucide-landmark"><path d="M10 18v-7"/><path d="M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M3 22h18"/><path d="M6 18v-7"/></svg></h3>
+                            </div>
+                            <div id="value">
+                                <h1 id="numla"><%=formatNumbers(total.la)%></h1>
+                                <div id="titledb">
+                                    <h3>Amount Lent</h3>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </a> 
+                <a href="history">
+                    <div class="history" id="cards">
+                        <div id="counttp">
+                            <div class="svg">
+                                <h3><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="70%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-history-icon lucide-history"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg></h3>
+                            </div>
+                            <div id="value">
+                                <h1>View</h1>
+                                <div id="titledb">
+                                     <h3>History</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
                 </div>
-            </a>
-             <a href="tclosedpawn">
-                <div class="totalpawn" id="cards">
-                    <div id="counttp">
-                        <div class="svg">
-                            <h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-x-icon lucide-circle-x"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg></h3>
+                <div class="pres">
+                <div class="mcars">
+                    <div class="dhead">
+                        <h2>today due</h2>
+                    </div>
+                    <%for(var i=0;i< to.length;i++){%>
+                        <%if(!to||to.length===0 ){%>
+                            <p>no due payers today</p>
+                        <%}else{%>
+                    <div class="ncard">
+                        <div class="dmig">
+                            <img src="<%=to[i].product_image%>" alt="">
                         </div>
-                        <div id="value">
-                        <h1><%=formatd(total.cls)%></h1>
-                        <div id="titledb">                
-                            <h3>closed Pawn</h3>
+                        <div class="ddet">
+                            <h3><%=to[i].product_name%> <span>(<%=to[i].product_id%>)</span></h3>
+                            <p>Cusotmer id: <%=to[i].cid%></p>
                         </div>
+                        <div class="dbtn">
+                           <a href="productdetails/<%=to[i].product_id%>"> <button>intrest</button></a>
                         </div>
                     </div>
-                    
+                        <%}%> 
+                    <%}%>
+                </div>  
                 </div>
-            </a>
-             <a href="tauctionedpawn">
-                <div class="totalpawn" id="cards">
-                    <div id="counttp">
-                        <div class="svg">
-                            <h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell-ring-icon lucide-bell-ring"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M22 8c0-2.3-.8-4.3-2-6"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/><path d="M4 2C2.8 3.7 2 5.7 2 8"/></svg></h3>
-                        </div>
-                        <div id="value">
-                        <h1><%=formatd(total.auc)%></h1>
-                        <div id="titledb">                
-                            <h3>Auctioned Pawn</h3>
-                        </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </a>
-            <a href="acounts">
-            <div class="amountlent" id="cards">
-                <div id="counttp">
-                    <div class="svg">
-                        <h3><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="70%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-landmark-icon lucide-landmark"><path d="M10 18v-7"/><path d="M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M3 22h18"/><path d="M6 18v-7"/></svg></h3>
-                    </div>
-                    <div id="value">
-                        <h1 id="numla"><%=formatNumbers(total.la)%></h1>
-                        <div id="titledb">
-                            <h3>Amount Lent</h3>
-                        </div>
-                    </div>
-                </div>
-              
-            </div>
-             </a> 
-            <a href="history">
-            <div class="history" id="cards">
-                <div id="counttp">
-                     <div class="svg">
-                        <h3><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="70%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-history-icon lucide-history"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg></h3>
-                    </div>
-                    <div id="value">
-                        <h1>View</h1>
-                        <div id="titledb">
-                             <h3>History</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </a>
+            </div> 
+            
             
         </div>
-</div>
-        </div>
     </div>
+   
 </body>
 <script src="script.js"></script>
 </html>

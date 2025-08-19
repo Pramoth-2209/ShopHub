@@ -10,6 +10,11 @@
     <div>
         <%-include('partials/navbar')%>
     </div>
+    <div class="backbtn">
+        <a href="/dashboard"><button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left-icon lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        </button></a>
+    </div>
     <div class="summa">
         <div>
             <div class="dbodytailm">
@@ -55,7 +60,7 @@
                             <input type="number" id="filteryear" name="filteryear">
                         </div>
                     </div>
-                    
+                        
                 </div>
                 <div class="regibtns">
                         <button onclick="sub()" id="regibtn">Apply Filter</button>
@@ -67,12 +72,12 @@
         </div>
         <div class="lnp">
            <div class="lent">
-                <label for="l">Amount lent: </label>
+                <label for="l">Amount lent </label>
                 <%if(message){%>
                     <p><%=message%></p>
                 <%}else{%>
-                <%if(bb.gg){%>
-                    <p>₹.<%=bb.gg%></p>  
+                <%if(bb.ggg){%>
+                    <p>₹.<%=bb.ggg%></p>  
                 <%}else if(bb.mm){%>                 
                 <p>₹.<%=bb.mm%></p> 
                 <%}else if(bb.dd){%>               
@@ -86,16 +91,16 @@
                 <%}%> <%}%>       
            </div>
            <div class="profit">
-                <label for="p">Profit: </label>
+                <label for="p">Profit </label>
                 <%if(message){%>
                     <p><%=message%></p>
                 <%}else{%>
-                <%if(bb.ggg){%>
-                    <p>₹.<%=bb.ggg%></p>  
+                <%if(bbb.ggg){%>
+                    <p>₹.<%=bbb.ggg%></p>  
                 <%}else if(bb.mmm){%>                 
-                <p>₹.<%=bb.mmm%></p> 
-                <%}else if(bb.ddd){%>               
-                <p>₹.<%=bb.ddd%></p>
+                <p>₹.<%=bbb.mmm%></p> 
+                <%}else if(bbb.ddd){%>               
+                <p>₹.<%=bbb.ddd%></p>
                 <%}else if(bb.yyy){%>             
                 <p>₹.<%=bb.yyy%></p>
                 <%}else if(bb.fff){%>                  
@@ -118,20 +123,18 @@
                     
                     </tr>
             </thead>
+           
             <tbody>
-                <%for(var i=0;i< df.length;i++){%>
-                    <%if(df.length===0){%>
-                        <p>no matching records found</p>
-                    <%}else{%>
+                <%for(var i=0;i< dfs.length;i++){%>     
                 <tr>
-                    <td><%=df[i].product_id%></td>
-                    <td><%=df[i].cid%></td>
-                    <td><%=df[i].product_name%></td>
-                    <td><%=df[i].loan_amount%></td>
+                    <td><%=dfs[i].product_id%></td>
+                    <td><%=dfs[i].cid%></td>
+                    <td><%=dfs[i].product_name%></td>
+                    <td><%=dfs[i].loan_amount%></td>
                 </tr>
                 <%}%>
-                <%}%>
             </tbody>
+
         </table>
         </div>
          <div class="tpdisplays">
@@ -142,17 +145,18 @@
                     <th>due id</th>
                     <th>product id</th>
                     <th>due amount</th>
-                    </tr>
+                </tr>
                
             </thead>
             <tbody>
                 <%for(var i=0;i< df.length;i++){%>
-
+                    <%if(df[i].due_amount_paid){%>
                 <tr>
                     <td><%=df[i].due_id%></td>
                     <td><%=df[i].pro_id%></td>
                     <td><%=df[i].due_amount_paid%></td>
                 </tr>
+                <%}%>
                 <%}%>
             </tbody>
         </table>

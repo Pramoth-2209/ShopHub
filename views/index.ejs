@@ -7,21 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="lbody">
         <div class="loginbox">
+            <div class="logflex">
             <h2>login</h2>
+            <%if(message){%>
+                <p style="color: red;"><%=message%></p>
+            <%}%>
+            </div>
             <form action="/login" method="post">
                 <div class="inps">
-                    <input type="text" id="userid" placeholder="enter username" required>
+                    <input type="text" id="userid" placeholder="enter username" name="aname">
                 </div>
                 <div class="inps">
-                    <input type="password" id="password" placeholder="enter password" required>
+                    <input type="password" id="password" placeholder="enter password"  name="apassword">
                 </div>
                 <div>
-                    <button type="submit" >login</button>
+                    <button type="submit" onclick="log()">login</button>
                 </div>
             </form>
         </div>
    </div>
+  
 </body>
+<script src="/script.js"></script>
 </html>

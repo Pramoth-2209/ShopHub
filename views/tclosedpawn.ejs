@@ -11,6 +11,11 @@
     <div class="navs">
         <%-include('partials/navbar')%>
     </div>
+     <div class="backbtn">
+        <a href="/dashboard"><button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left-icon lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        </button></a>
+    </div>
     <div>
         <div class="tpdisplaym">
             <div class="acheadc">
@@ -18,23 +23,28 @@
                     <h2>Closed Pawns</h2>
                 </div>
                 </div>
-                <table>
+                
                      
                     <div class="thone">
                         <div class="thtwo" id="tpgold">
-                            <h4>Closed Gold Pawn:</h4><span><h1><%=formatd(cls.gold)%></h1></span>
+                            <h4>Closed Gold Pawn</h4><span><h1><%=formatd(cls.gold)%></h1></span>
                         </div>
                         <div class="thtwo" id="tpsilver">
-                            <h4>Closed Silver Pawn:</h4><span><h1><%=formatd(cls.silver)%></h1></span>
+                            <h4>Closed Silver Pawn</h4><span><h1><%=formatd(cls.silver)%></h1></span>
                         </div>
                         <div class="thtwo" id="tpdiamond">
-                            <h4>Closed Diamon Pawn:</h4><span><h1><%=formatd(cls.diamond)%></h1></span>
+                            <h4>Closed Diamon Pawn</h4><span><h1><%=formatd(cls.diamond)%></h1></span>
                         </div>
                         <div class="thtwo">
-                            <h4>Total Closed Pawns:</h4><span><h1><%=formatd(cls.ap)%></h1></span>
+                            <h4>Total Closed Pawns</h4><span><h1><%=formatd(cls.ap)%></h1></span>
                         </div>
                         
                     </div>
+                    <div class="tborder">
+                        <div>
+                            <h3>Details:</h3>
+                        </div>
+                    <table>
                     <thead>
                         <tr> 
                             <th>Customer id</th>
@@ -61,6 +71,7 @@
                     </tbody>
                     
                 </table>
+                </div>
             </div>
         </div>
    

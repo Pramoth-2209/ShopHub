@@ -13,7 +13,28 @@
 body{
     margin: 0;
     background-color: #e8e8e8;
+    /*background-color: rgb(243, 244, 246); */
     font-family: Arial, Helvetica, sans-serif;
+}
+.backbtn{
+    width:94.8%;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+}
+.backbtn svg{
+    margin-top: 2px;
+    color: white;
+}
+.backbtn button{
+    height: 35px;
+    width: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(59, 59, 59);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.323);
 }
 
 .lbody{
@@ -25,7 +46,8 @@ body{
 .loginbox{
     background-color: white;
     padding: 20px;
-    width: 300px;
+    width: 400px;
+    /* height: 230px; */
     border-radius: 10px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.27);
     transition: 0.3s ease-in-out;
@@ -37,10 +59,12 @@ body{
 .loginbox input{
     padding: 10px;
     width: 100%;
+    height: 25px;
     margin-bottom: 15px;
     border-radius: 5px;
     border: 1px solid gray;
     transition: 0.2s ease-in-out;
+    font-size: 15px;
 
 }
 .loginbox input:hover{
@@ -53,14 +77,21 @@ body{
     width: 100%;
    
 }
+.logflex{
+    display: flex;
+    align-items: center;
+    gap: 90px;
+}
 .loginbox button{
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     background-color: rgb(59, 59, 59);
     color: white;
     border-radius: 10px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.323);
     border: none;
+    font-size: 17px;
+    font-weight: bolder;
     transition: 0.2s ease-in-out;
 }
 .loginbox button:hover{
@@ -128,6 +159,7 @@ body{
 #logout:hover{
     background-color:rgb(59, 59, 59);
     border-radius: 10px;
+    width: 100%;
 }
 .logos{
  width: fit-content;
@@ -135,6 +167,15 @@ body{
  align-items: center;
  justify-content: center;
  margin-top: 5px;
+}
+.logos svg{
+    height: 25px;
+}
+
+.fields p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (min-width:20px){
@@ -144,13 +185,13 @@ body{
         display: none;
         align-items:start;
         position: absolute;
-        top: 60px;
+        top: 50px;
         padding: 20px;
         right: 0px;
         z-index: 999;
-        background-color:rgba(59, 59, 59, 0.752);
-        backdrop-filter: blur(2px);
-        margin: 10px 40px 0px 10px;
+        background-color:rgba(59, 59, 59, 0.667);
+        backdrop-filter: blur(5px);
+        margin: 10px 30px 0px 10px;
         border-radius: 10px;
       
     }
@@ -164,6 +205,7 @@ body{
    .menus a{
     color: white;
     text-decoration: none;
+    width: 100%;
    }
 }
 
@@ -193,10 +235,11 @@ button svg:hover{
 }
 .searchbar{
     width:100%;   
-    align-items: center;
-    justify-content: center;
+    align-items: baseline;
+    justify-content:center;
     text-align: center;
     display: flex;
+    
 }
 .searchbar input{
     width: 500px;
@@ -210,6 +253,9 @@ button svg:hover{
 }
 #search::placeholder{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.pawns p{
+    color: white;
 }
 .searchbar form{
     background-color:white;
@@ -225,22 +271,126 @@ button svg:hover{
 }
 .dashcards{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    gap: 40px;
-    margin: 15px;
+    grid-template-columns: 2.9fr 1.1fr;
+    /* background-color: rgb(197, 197, 197); */
+    background-color: white;
+    /* background: linear-gradient(10deg,rgba(255, 255, 255, 0)90%,black 10% ) ; */
+    margin: 35px auto;
     margin-top: 80px;
-    background-color:rgba(59, 59, 59, 0.178);
-    padding: 20px;
+    border-radius: 10px;
+    width: 93%;
+    padding: 15px;
+}
+
+.mcar{
+     display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 20px;
+    margin: 5px;
+    padding: 10px;
+   
+}
+.mcars{
+    border-radius: 10px;
+    width:100%;
+    margin: 10px;
+    padding: 10px;
+    background:rgba(117, 117, 117, 0.33);
+    height: 520px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    overflow-y: auto;
+    transition: 0.2s ease-in-out;
+}
+.mcars:hover{
+    transform:scale(1.01);
+    
+    
+}
+.pres{
+    perspective: 800px;
+    width:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ncard{
+    background-color: rgba(255, 255, 255, 0.947);
+    border-radius: 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0px 10px 9px;
+    position: relative;
+    transition: 0.2s ease-in-out;
+}
+.ncard:hover{
+    transform: scale(1.05);
+}  
+.ncard h3,p{
+    margin: 0;
+    line-height: 20px;
+}
+.ncard h3{
+    font-size: 16px;
+}
+.ncard p{
+    margin: 0;
+    font-weight: bolder;
+    color: rgb(101, 101, 101);
+    font-size: 14px;
+}
+.ddet{
+    width: 63%;
+}
+.dhead{
+    color:black;
+    padding-left: 10px;
+}
+.dmig {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:fit-content;
+    width:fit-content;
+    border-radius: 10px;
+    margin-right: 15px;
+    word-wrap: break-word;
+}
+.dbtn{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    margin-right: 5px;
+    width: 100px;
+}
+.dbtn button{
+    width: 55px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.dmig img{
+    height:60px;
+    width: 80px;
     border-radius: 10px;
 }
 #cards{
     height: 150px;
     background-color: white;
+    border: 1px solid gray; 
     border-radius: 10px;
     transition: 0.2s ease-in-out;
-    padding: 10px;
+    padding: 5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.27) ; 
     transition: 0.3s ease-in-out; 
+    /* width: 350px; */
 }
 #cards:hover{
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.27);
@@ -309,6 +459,7 @@ button svg:hover{
 .dashcards a{
     text-decoration: none;
     color: rgb(59, 59, 59);
+    
 
 }
 
@@ -351,7 +502,7 @@ button svg:hover{
     align-items: center;
     gap: 10px;
     width: 100%;
-    margin-top: 0px;
+    margin-top: 5px;
 
 }
 
@@ -424,6 +575,7 @@ button svg:hover{
     margin-bottom: 10px;
     margin-top: 20px;
 }
+
 .fields select{
     padding: 5px;
 }
@@ -512,9 +664,9 @@ button svg:hover{
     height: 25px;
     width:auto;
     border-radius: 5px;
-    border: 1px solid gray;
     padding: 5px;
     font-size: 14px;
+     border: 1px solid gray;
 }
 .idsk{
     width: 100%;
@@ -569,19 +721,20 @@ strong{
 /*total pawns*/
 .tpdisplay{
     background-color: white;
-    width: 97%;
+    width: 94%;
     margin: 10px auto;
-    padding: 0px;
+    padding: 10px;
     border-radius: 10px;
     border: 10px solid white; 
     z-index: 99;
 
 }
 
+
 .tpdisplaym{
     background-color: white;
-    width: 97%;
-    margin: 30px auto;
+    width: 94%;
+    margin: 10px auto;
     padding: 0px;
     border-radius: 10px;
     border: 10px solid white; 
@@ -626,7 +779,7 @@ strong{
     width: 98%;
     align-items: center;
     justify-content: center;
-    margin:30px auto;
+    margin:20px auto;
     margin-bottom: 15px;
     border-collapse: collapse;
     border: 1px solid gray;
@@ -686,23 +839,26 @@ th,td{
 /*totalcustomer*/
 .acbody{
     width: 93%;
-    margin: 25px auto;
+    margin: 10px auto;
     background-color: white;
     border-radius: 10px;
-    padding: 10px;
+    padding: 15px;
 
 }
 .acbody .achead h2{
 width: 100%;
-padding: 5px 5px 5px 10px;
 margin: 10px;
 }
 .tcbody{
     margin:3% auto;
-    width: 98%;
+    width: 95%;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
     gap: 30px;
+    padding: 0px 5px 0px 5px;
+}
+.tcbody a{
+    width: fit-content;
 }
 .ccards{
     display: grid;
@@ -762,7 +918,7 @@ a{
     background-color:rgb(238, 238, 238);
     color: black;
     height: fit-content;
-    width: fit-content;
+    width: 460px;
     min-width: 400px;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.329);
@@ -780,7 +936,7 @@ a{
    
 .ccbody{
     padding: 0px 10px 0px 10px;
-    height: 200px;
+    height: 150px;
     border-radius: 10px;
     
 }
@@ -851,13 +1007,14 @@ table{
 }
 .thone{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     align-items:center;
     justify-content: center;
-    width: 90%;
+    width: 80%;
     padding: 10px;
     margin: 20px auto;
-    gap: 20px;
+    gap: 30px;
+   
 }
 .thone h1{
     font-size: 50px;
@@ -867,17 +1024,18 @@ table{
 }
 .thoned{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     align-items:center;
     justify-content: center;
-    width: 90%;
+    width: 80%;
     padding: 10px;
     margin: 20px auto;
-    gap: 20px;
+    gap: 30px;
+    
 }
 .thoned h1{
-    font-size: 35px;
-    padding: 0px ;
+    font-size: 34px;
+    padding: 0px 0px 0px 10px;
     margin: 0px;
     margin-left: 5px;
 }
@@ -886,49 +1044,80 @@ table{
     color: black;
 }
 .thtwo{
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
+    display: grid;/*flex*/
     padding: 10px;
-    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     width: auto;
-    background-color: rgb(217, 254, 207);
-    border: 2px solid rgb(46, 220, 33);
-   
+    box-shadow: 1px 1px 10px rgb(198, 198, 198);
+    background-color: white;
+    border: none;
+    border-top: 5px solid rgb(21, 209, 21);
+    /* align-items:baseline;
+    justify-content: center; */
+     /* background-color: rgb(217, 254, 207);
+    border: 2px solid rgb(46, 220, 33); */
 }
 .thtwo h4{
-    
+    margin: 5px 5px 10px 10px  ;
+    font-size: 17px;
+}
+th
+h4{
+    font-size: 15px;
+}
+
+.thtwo h1{
+    font-size: 34px;
+    padding: 2px 5px 2px 5px ;
 }
 #tpgold{
-    background-color: rgb(255, 243, 177);
-    border: 2px solid gold;
+    /* background-color: rgb(255, 243, 177);
+    border: 2px solid gold;  */
+    background-color: white;
+    border: none;
+    border-top: 5px solid gold;
 }
 #tpsilver{
-    background-color: rgb(221, 221, 221);
-    border: 2px solid silver;
+    /* background-color: rgb(221, 221, 221);
+    border: 2px solid silver; */
+    background-color: white;
+    border: none;
+    border-top: 5px solid silver;
 }
 #tpdiamond{
-    background-color: rgba(233, 232, 232, 0.808);
-    border: 2px solid rgb(132, 132, 132);
+    /* background-color: rgba(233, 232, 232, 0.808);
+    border: 2px solid rgb(132, 132, 132); */
+    background-color: white;
+    border: none;
+    border-top: 5px solid rgb(101, 101, 101);
 }
 #alstatus{
-    background-color:rgba(248, 84, 84, 0.227);
-    border: 1px solid red;
+    /* background-color:rgba(248, 84, 84, 0.227);
+    border: 1px solid red; */
+    background-color: white;
+    border: none;
+    border-top: 5px solid red;
 }
 
 #clstatus{
-    background-color: rgb(201, 224, 255);
-    border: 1px solid rgb(0, 84, 203);
+    /* background-color: rgb(201, 224, 255);
+    border: 1px solid rgb(0, 84, 203); */
+    background-color: white;
+    border: non;
+    border-top: 5px solid rgb(0,84,203);
 }
 
 /*customerdetails*/
 .cdhead{
-    padding:2% 3% 2% 3%;
-    width: 94%;
-    margin-bottom: 10px;
+    padding:25px;
+    width: 92%;
+    margin: 10px auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
     background-color: white;
     position: sticky;
-    z-index: 999;
+    z-index: 99;
 
 }
 
@@ -976,9 +1165,15 @@ table{
 .detailscd{
     margin: 10px 0px 0px 0px;
 }
+#nsp{
+    font-weight: bolder;
+    color: rgb(128, 128, 128);
+
+}
 .detailscd p{
     margin: 5px 0px 0px 0px;
     color: rgb(128, 128, 128);
+    width: 200px;
 }
 .addpwan svg{
     height: 25px;
@@ -1078,7 +1273,7 @@ details{
 .cdright{
     border-radius: 10px;
     height:100%;
-    padding: 10px 0px 30px 0px;
+    padding: 0px 0px 30px 0px;
 }
 .dbodytail p{
     margin: 0;
@@ -1127,7 +1322,7 @@ details{
 
 .dbodytails button{
     width:fit-content;
-    padding: 0px 10px;
+    padding: 5px;
     margin-right: 0px;
     background-color: rgb(59, 59, 59);
     color: white;
@@ -1206,10 +1401,12 @@ margin: 3px;
 }
 .pdhead{
     display: flex;
-    width: 99%;
+    width: 95%;
     margin: 10px auto;
-    gap: 10px;
+    margin-bottom: 20px;
+    gap: 15px;
 }
+
 .pimage{
     width: 100%;
     height:495px;
@@ -1306,7 +1503,7 @@ margin: 3px;
 }
 /*acounts*/
 .dbodytailm{
-    width: 95% ;
+    width: 97% ;
     margin: 20px auto;
 }
 
@@ -1316,7 +1513,7 @@ margin: 3px;
 }
 .divfilter button{
  width:fit-content;
-    padding: 0px 10px;
+    padding:5px;
     margin-right: 0px;
     background-color: rgb(59, 59, 59);
     color: white;
@@ -1381,7 +1578,8 @@ margin: 10px auto;
     gap: 20px;
 }
 .lnp{
-    display:flex;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(600px,1fr));
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -1393,49 +1591,115 @@ margin: 10px auto;
 }
 .summa{
     background-color:white;
-    width: 94%;
+    width: 94.3%;
     margin: 10px auto;
     padding:5px;
     border-radius: 10px;
-    margin-top: 25px;
+    margin-top: 10px;
+}
+details{
+    padding-left: 20px;
+    margin-top: 10px;
+    font-size: 20px;
 }
 .lent{
-    background-color: rgb(59, 59, 59);
-    width: 50%;
-    box-shadow: 0 px 5px 10px rgba(0, 0, 0, 0.323);
+    /* background-color: rgb(59, 59, 59); */
+    width: 100%;
+    /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.323); */
     color: white;
     border-radius: 10px;
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    background-color: rgb(59, 59, 59);
+    display: grid;
+    /* align-items: baseline;
+    justify-content: center; */
+    
 
 }
 .profit{
-    background-color: rgb(59, 59, 59);
-    width: 50%;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.323);
+    /* background-color: rgb(59, 59, 59);  */
+    width: 100%;
+    /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.323); */
     color: white;
     border-radius: 10px;
-     display: flex;
-    align-items: baseline;
-    justify-content: center;
+     display: grid;
+    /*align-items: baseline;
+    justify-content: center; */
 }
 .lent p{
     font-size: 35px;
     font-weight: bolder;
-    margin-left: 10px;
-    text-shadow: 0px 0px 10px gold;
-    color: gold;
+    /* text-shadow: 0px 0px 10px gold;
+    color: gold; */
+    color:rgb(59, 59, 59);
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    margin: 0px 10px 0px 10px;
+    padding: 0px 10px 0px 10px;
+
 }
 .profit p{
     font-size: 35px;
     font-weight: bolder;
     margin-left: 10px;
-    text-shadow: 0px 0px 10px rgb(125, 255, 125);
-    color: rgb(125, 255, 129);
+    /* text-shadow: 0px 0px 10px rgb(125, 255, 125);
+    color: rgb(125, 255, 129); */
+    color: rgb(59, 59, 59);
+     display: flex;
+     align-items: end;
+    justify-content: end;
+    margin: 0px 10px 0px 10px;
+    padding: 0px 10px 0px 10px;
 }
 .lnp label{
     font-weight: bolder;
     text-shadow: 0px 0px 10px white;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    margin: 10px;
+    padding: 10px 15px 0px 0px;
+    font-size: 16px;
+   color: rgb(101, 101, 101);
 }
+
+/* history */
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    margin:30px 10px 10px 10px;
+
+  }
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #f2f2f2;
+    border: 1px solid #ccc;
+    border-bottom: none;
+  }
+  .tab.active {
+    background: white;
+    border-top: 2px solid black;
+    font-weight: bold;
+  }
+  .tab-content {
+    display: none;
+    padding: 0px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  .tab-content.active {
+    display: block;
+  }
+  .tab-content h3{
+    padding-left: 20px;
+    
+  }
+  .tborder{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px;
+  }
+  .tborder h3{
+    margin-left: 20px;
+  }

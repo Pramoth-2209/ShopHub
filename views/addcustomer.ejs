@@ -10,7 +10,11 @@
     <div class="navs">
         <%-include('partials/navbar')%>
     </div>
-    
+    <div class="backbtn">
+        <a href="/dashboard"><button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left-icon lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        </button></a>
+    </div>
     <div class="aabody">
          <div class="achead">
             <H2>Add Customer</H2>
@@ -21,23 +25,23 @@
                     <div class="aleft">
                         <div class="fields">
                             <label for="name">Name<strong>*</strong></label>
-                            <input type="text" name="name" id="name" placeholder="Enter full name" required>
+                            <input type="text" name="name" id="name" placeholder="Enter full name"  class="aa">
                         </div>
                         <div class="fields">
                             <label for="fathername">Father name<strong>*</strong></label>
-                            <input type="text" name="father_name" id="fathername" placeholder="Enter father name" required >
+                            <input type="text" name="father_name" id="fathername" placeholder="Enter father name" class="aa">
                         </div>
                         <div class="fields">
                             <label for="dob">Date Of Birth<strong>*</strong></label>
-                            <input type="date" name="date_of_birth" id="dob" required>
+                            <input type="date" name="date_of_birth" id="dob" class="aa">
                         </div>
                         <div class="fields">
                             <label for="phonenumber">Phone No<strong>*</strong></label>
-                            <input type="tel" name="phone_number" id="phonenumber" placeholder="eg. 9234567890" required>
+                            <input type="tel" name="phone_number" id="phonenumber" placeholder="eg. 9234567890" class="aa" >
                         </div>
                         <div class="fields">
                             <label for="occupation">Occupation<strong>*</strong></label>
-                            <input type="text" name="occupation" placeholder="Enter occupation" id="occupation" required>
+                            <input type="text" name="occupation" placeholder="Enter occupation" id="occupation" class="aa">
                         </div>
                         <div class="fields">
                             <label for="customerphoto">Customer Photo<strong>*</strong></label>
@@ -47,7 +51,7 @@
                     <div class="aright">
                         <div class="fields">
                             <label for="address">Address<strong>*</strong></label>
-                            <textarea name="address" id="address" placeholder="Enter communication address" required></textarea>
+                            <textarea name="address" id="address" placeholder="Enter communication address" class="aa"></textarea>
                         </div>       
                     </div>
                         

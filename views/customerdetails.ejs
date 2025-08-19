@@ -7,7 +7,14 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    
+     <div class="navs">
+        <%-include('partials/navbar')%>
+    </div>
+    <div class="backbtn">
+        <a href="/totalcustomer"><button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left-icon lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        </button></a>
+    </div>
 
     <div class="cdhead">
         
@@ -35,7 +42,7 @@
                 <div class="detailscd">
                     <div class="dcdhead">
                         <div id="detailscd">
-                            <p>s/o</p>
+                            <span id="nsp">s/o</span>
                             <p> <%=products.father_name%></p>
                         </div>
                         <div id="detailscd">
@@ -110,47 +117,87 @@
        
         <div  class="cdright">
         <div>
-        <div class="tpdisplay">
+        <div class="tpdisplaym">
+           <div class="tborder">
             <details>
                 <summary> total details</summary>
+                
                 <div class="thoned">
-                        <div class="thtwo" id="tpgold">
-                            <h4>Active Gold Pawn:</h4><span><h1><%=formatd(cdetails.cgold)%></h1></span>
+                    <%if(cdet){%>
+                            <div class="thtwo" id="tpgold">
+                            <h4>Active Gold Pawn</h4><span><h1><%=formatd(0)%></h1></span>
                         </div>
                         <div class="thtwo" id="tpsilver">
-                            <h4>Active Silver Pawn:</h4><span><h1><%=formatd(cdetails.csilver)%></h1></span>
+                            <h4>Active Silver Pawn</h4><span><h1><%=formatd(0)%></h1></span>
                         </div>
                         <div class="thtwo" id="tpdiamond">
-                            <h4>Active Diamond Pawn:</h4><span><h1><%=formatd(cdetails.cdiamond)%></h1></span>
+                            <h4>Active Diamond Pawn</h4><span><h1><%=formatd(0)%></h1></span>
                         </div>
                         <div class="thtwo">
-                            <h4>No.of Active Pawns:</h4><span><h1><%=formatd(cdetails.copen)%></h1></span>
+                            <h4>No.of Active Pawns</h4><span><h1><%=formatd(0)%></h1></span>
                         </div>
                         <div class="thtwo" id="tpgold">
-                            <h4>Closed Gold Pawn:</h4><span><h1><%=formatd(cdetails.clgold)%></h1></span>
+                            <h4>Closed Gold Pawn</h4><span><h1><%=formatd(0)%></h1></span>
                         </div>
                         <div class="thtwo" id="tpsilver">
-                            <h4>Closed Silver Pawn:</h4><span><h1><%=formatd(cdetails.clsilver)%></h1></span>
+                            <h4>Closed Silver Pawn</h4><span><h1><%=formatd(0)%></h1></span>
                         </div>
                         <div class="thtwo" id="tpdiamond">
-                            <h4>closed Diamond Pawn:</h4><span><h1><%=formatd(cdetails.cldiamond)%></h1></span>
+                            <h4>closed Diamond Pawn</h4><span><h1><%=formatd(0)%></h1></span>
                         </div>
                         <div class="thtwo" id="clstatus">
-                            <h4>No.of closed Pawns:</h4><span><h1><%=formatd(cdetails.closed)%></h1></span>
+                            <h4>No.of closed Pawns</h4><span><h1><%=formatd(0)%></h1></span>
                         </div>
                         <div class="thtwo" id="tpgold">
-                            <h4>Auctioned Gold Pawn:</h4><span><h1><%=formatd(cdetails.agold)%></h1></span>
+                            <h4>Auctioned Gold Pawn</h4><span><h1><%=formatd(0)%></h1></span>
                         </div>
                         <div class="thtwo" id="tpsilver">
-                            <h4>Auction Silver Pawn:</h4><span><h1><%=formatd(cdetails.asilver)%></h1></span>
+                            <h4>Auction Silver Pawn</h4><span><h1><%=formatd(0)%></h1></span>
                         </div>
                         <div class="thtwo" id="tpdiamond">
-                            <h4>Auction Diamond Pawn:</h4><span><h1><%=formatd(cdetails.adiamond)%></h1></span>
+                            <h4>Auction Diamond Pawn</h4><span><h1><%=formatd(0)%></h1></span>
                         </div>
                         <div class="thtwo" id="alstatus">
-                            <h4>No.of auction Pawns:</h4><span><h1><%=formatd(cdetails.acution)%></h1></span>
+                            <h4>No.of auction Pawns</h4><span><h1><%=formatd(0)%></h1></span>
+                        </div> 
+                        <%}else{%>
+                        <div class="thtwo" id="tpgold">
+                            <h4>Active Gold Pawn</h4><span><h1><%=formatd(cdetails.cgold)%></h1></span>
                         </div>
-                        
+                        <div class="thtwo" id="tpsilver">
+                            <h4>Active Silver Pawn</h4><span><h1><%=formatd(cdetails.csilver)%></h1></span>
+                        </div>
+                        <div class="thtwo" id="tpdiamond">
+                            <h4>Active Diamond Pawn</h4><span><h1><%=formatd(cdetails.cdiamond)%></h1></span>
+                        </div>
+                        <div class="thtwo">
+                            <h4>No.of Active Pawns</h4><span><h1><%=formatd(cdetails.copen)%></h1></span>
+                        </div>
+                        <div class="thtwo" id="tpgold">
+                            <h4>Closed Gold Pawn</h4><span><h1><%=formatd(cdetails.clgold)%></h1></span>
+                        </div>
+                        <div class="thtwo" id="tpsilver">
+                            <h4>Closed Silver Pawn</h4><span><h1><%=formatd(cdetails.clsilver)%></h1></span>
+                        </div>
+                        <div class="thtwo" id="tpdiamond">
+                            <h4>closed Diamond Pawn</h4><span><h1><%=formatd(cdetails.cldiamond)%></h1></span>
+                        </div>
+                        <div class="thtwo" id="clstatus">
+                            <h4>No.of closed Pawns</h4><span><h1><%=formatd(cdetails.closed)%></h1></span>
+                        </div>
+                        <div class="thtwo" id="tpgold">
+                            <h4>Auctioned Gold Pawn</h4><span><h1><%=formatd(cdetails.agold)%></h1></span>
+                        </div>
+                        <div class="thtwo" id="tpsilver">
+                            <h4>Auction Silver Pawn</h4><span><h1><%=formatd(cdetails.asilver)%></h1></span>
+                        </div>
+                        <div class="thtwo" id="tpdiamond">
+                            <h4>Auction Diamond Pawn</h4><span><h1><%=formatd(cdetails.adiamond)%></h1></span>
+                        </div>
+                        <div class="thtwo" id="alstatus">
+                            <h4>No.of auction Pawns</h4><span><h1><%=formatd(cdetails.acution)%></h1></span>
+                        </div> 
+                        <%}%> 
                 </div>
             </details>
         <table>
@@ -198,8 +245,10 @@
              <%}%>
         </table>
     </div>
+   
     
     </div>
+    
     </div>  
         
 </body>

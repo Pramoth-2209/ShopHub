@@ -1,47 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/style.css">
+<meta charset="UTF-8">
+<title>History Page</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-       <%-include('partials/navbar')%>
+    <div class="navs">
+        <%-include('partials/navbar')%>
     </div>
-        <div class="tpdisplaym">
-            <div class="acheadc">
-                <div class="addhs">
-                    <h2>History</h2>
+    <div class="backbtn">
+        <a href="/dashboard"><button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left-icon lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        </button></a>
+    </div>
+    <div class="tpdisplaym">
+        <div class="acheadc">
+            <div class="addhs">
+                <h2>History Page</h2>
+            </div>
+            <div>
+                <!-- Tabs -->
+                <div class="tabs">
+                <div class="tab active" data-tab="customers">Customers</div>
+                <div class="tab" data-tab="products">Products</div>
+                <div class="tab" data-tab="payments">Intrest</div>
+                <div class="tab" data-tab="closed">Closed</div>
+                </div>
+
+                <!-- Content -->
+                <div id="customers" class="tab-content active">
+                <h3>Customers</h3>
+                <table border="1" cellpadding="5">
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Name</th>
+                        <th>Father Name</th>
+                        <th>Date-Of-Birth</th>
+                        <th>Phone Number</th>
+                        <th>Occupation</th>
+                        <th>Address</th>
+                        <th>Join Date</th>
+                    </tr>
+                    <%if(details.length===0||!details){%>
+                        <tr>
+                            <td>no record found :(</td>
+                            <td>no record found :(</td>
+                            <td>no record found :(</td>
+                            <td>no record found :(</td>
+                            <td>no record found :(</td>
+                            <td>no record found :(</td>
+                            <td>no record found :(</td>
+                            <td>no record found :(</td>
+                        </tr>
+                    <%}else{%>
+                    <%for(var i=0;i< details.length;i++){%>
+                    <tr>
+                        <td><%=details[i].id%></td>
+                        <td><%=details[i].name%></td>
+                        <td><%=details[i].father_name%></td>
+                        <td><%=details[i].date_of_birth%></td>
+                        <td><%=details[i].phone_number%></td>
+                        <td><%=details[i].occupation%></td>
+                        <td><%=details[i].address%></td>
+                        <td><%= new Date(details[i].created_at).toDateString()%></td>
+                    </tr>
+                    <%}%>
+                     <%}%>
+                </table>
+                </div>
+
+                <div id="products" class="tab-content">
+                <h3>Products</h3>
+                <table border="1" cellpadding="5">
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Customer ID</th>
+                        <th>Product Name</th>
+                        <th>Product Type</th>
+                        <th>Product Weight</th>
+                        <th>Estimated Amount</th>
+                        <th>Loan Amount</th>
+                        <th>Intrest Rate</th>
+                        <th>Due date</th>
+                        <th>Pawn Date</th>
+                        <th>status</th>
+                    </tr>
+                    <%if(!ptdetails||ptdetails.length===0){%>
+                        <tr>
+                            <td>no record found :(</td>
+                            <td>no record found :(</td>
+                            <td>no record found :(</td>
+                            <td>no record found :(</td>
+                            <td>no record found :(</td>
+                            <td>no record found :(</td>
+                            <td>no record found :(</td>
+                            <td>no record found :(</td>
+                            <td>no record found :(</td>
+                            <td>no record found :(</td>
+                            <td>no record found :(</td>
+                        </tr>
+                    <%}else{%>
+                    <%for(var j=0;j< ptdetails.length;j++){%>
+                    <tr>
+                        <td><%=ptdetails[j].product_id%></td>
+                        <td><%=ptdetails[j].cid%></td>
+                        <td><%=ptdetails[j].product_name%></td>
+                        <td><%=ptdetails[j].product_type%></td>
+                        <td><%=ptdetails[j].product_weight%></td>
+                        <td><%=ptdetails[j].estimated_amount%></td>
+                        <td><%=ptdetails[j].loan_amount%></td>
+                        <td><%=ptdetails[j].interest_rate%></td>
+                        <td><%= new Date(ptdetails[j].due_date).toDateString() %></td>
+                        <td><%=new Date(ptdetails[j].product_opened_date).toDateString()%></td>
+                        <!-- <td><%=ptdetails[j].product_status%></td> -->
+                        <%if(ptdetails[j].product_status=="open"){%>
+                            <td id="status"><%=ptdetails[j].product_status%></td>
+                        <%}else if(ptdetails[j].product_status=="auctioned"){%>
+                            <td id="astatus"><%=ptdetails[j].product_status%></td>
+                        <%}else{%>
+                            <td id="cstatus"><%=ptdetails[j].product_status%></td>
+                        <%}%>
+                    </tr>
+                    <%}%>
+                    <%}%>
+                </table>
+                </div>
+
+                <div id="payments" class="tab-content">
+                <h3>Intrest</h3>
+                <table border="1" cellpadding="5">
+                    <tr>
+                        <th>Intrest ID</th>
+                        <th>Product ID</th>
+                        <th>Intrest Paid At</th>
+                        <th>Intrest Paid Amount</th>
+                        <th>Intrest Payment Mode</th>
+                        <th>Intrest Paid By</th>
+                    </tr>
+                    <%if(!dtdetails||dtdetails.length===0){%>
+                        <td>no record found :(</td>
+                        <td>no record found :(</td>
+                        <td>no record found :(</td>
+                        <td>no record found :(</td>
+                        <td>no record found :(</td>
+                        <td>no record found :(</td>
+                    <%}else{%>
+                    <%for(var k=0;k< dtdetails.length;k++){%>
+                    <tr>
+                        <td><%=dtdetails[k].due_id%></td>
+                        <td><%=dtdetails[k].pro_id%></td>
+                        <td><%= new Date(dtdetails[k].payment_date).toDateString() %></td>
+                        <td><%=dtdetails[k].due_amount_paid%></td>
+                        <td><%=dtdetails[k].mode%></td>
+                        <td><%=dtdetails[k].name%></td>
+                    </tr>
+                    <%}%>
+                    <%}%>
+                </table>
+                </div>
+
+                <div id="closed" class="tab-content">
+                    <h3>Closed</h3>
+                    <table border="1" cellpadding="5">
+                        <tr>
+                            <th>Close ID</th>
+                            <th>Product ID</th>
+                            <th>Closed At</th>
+                            <th>Amount Paid</th>
+                            <th>Amount Paid By</th>
+                            <th>Loan Amount</th>
+                        </tr>
+                        
+                        <%if(cpdetails.length===0||!cpdetails){%>
+                            <tr>
+                                <td>no record found :(</td>
+                                <td>no record found :(</td>
+                                <td>no record found :(</td>
+                                <td>no record found :(</td>
+                                <td>no record found :(</td>
+                                <td>no record found :(</td>
+                            </tr>
+                        <%}else{%>
+                        <%for(var l=0;l< cpdetails.length;l++){%>
+                            
+                        <tr>
+                            <td><%=cpdetails[l].close_id%></td>
+                            <td><%=cpdetails[l].prod_id%></td>
+                            <td><%= new Date(cpdetails[l].close_date).toDateString() %></td>
+                            <td><%=cpdetails[l].amount_paid%></td>
+                            <td><%=cpdetails[l].cname%></td>
+                            <td><%=cpdetails[l].loanamount%></td>
+                        </tr>
+                        <%}%>
+                        <%}%>
+                    </table>
                 </div>
             </div>
-            <table>
-                <thead>
-                    <tr> 
-                        <th>Customer id</th>
-                        <th>product id</th>
-                        <th>Product Name</th>
-                        <th>Product type</th>
-                        <th>Pawn date</th>
-                        <th>amount</th>
-                        <th>customer details</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>55</td>
-                        <td>55</td>
-                        <td>55</td>
-                        <td>55</td>
-                        <td>55</td>
-                        <td>55</td>
-                        <td>55</td>
-                    </tr>
-                </tbody> 
-            </table>
         </div>
-    
+    </div>
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const contents = document.querySelectorAll('.tab-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Remove active from all tabs
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => c.classList.remove('active'));
+
+      // Add active to clicked tab & its content
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+
 </body>
-<script src="/script.js"></script>
+<script src="script.js"></script>
 </html>
